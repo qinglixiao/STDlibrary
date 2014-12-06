@@ -1,26 +1,28 @@
-package com.library.core;
+package com.library.comm;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.util.LruCache;
+import android.support.v4.util.LruCache;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.RequestQueue.RequestFilter;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.library.core.LruBitmapCache;
 
-public class VolleySingleton {
-	private static VolleySingleton mInstance;
+public class VolleyHelper {
+	private static VolleyHelper mInstance;
 	private RequestQueue mRequestQueue;
 	private ImageLoader mImageLoader;
 	private static Context mCtx;
 
-	private VolleySingleton(Context context) {
+	private VolleyHelper(final Context context) {
 		mCtx = context;
 		mRequestQueue = getRequestQueue();
 		mImageLoader = new ImageLoader(mRequestQueue, new ImageLoader.ImageCache() {
-			private final LruCache<String, Bitmap> cache = new LruCache<String, Bitmap>(20);
-
+//			private final LruCache<String, Bitmap> cache = new LruCache<String, Bitmap>(20);
+			private final LruCache<String, Bitmap> cache = new LruBitmapCache(context.getApplicationContext());
 			@Override
 			public Bitmap getBitmap(String url) {
 				return cache.get(url);
@@ -33,9 +35,9 @@ public class VolleySingleton {
 		});
 	}
 
-	public static synchronized VolleySingleton getInstance(Context context) {
+	public static synchronized VolleyHelper getInstance(Context context) {
 		if (mInstance == null) {
-			mInstance = new VolleySingleton(context);
+			mInstance = new VolleyHelper(context);
 		}
 		return mInstance;
 	}
@@ -55,6 +57,14 @@ public class VolleySingleton {
 
 	public ImageLoader getImageLoader() {
 		return mImageLoader;
+	}
+	
+	public void cancelAll(Object requestTag){
+		mRequestQueue.cancelAll(requestTag);
+	}
+	
+	public void cancelAll(RequestFilter requestFilter){
+		mRequestQueue.cancelAll(requestFilter);
 	}
 
 }

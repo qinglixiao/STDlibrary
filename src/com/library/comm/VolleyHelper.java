@@ -102,5 +102,9 @@ public class VolleyHelper {
 	public void getString(String url, Listener<String> listener, ErrorListener errorListener){
 		addToRequestQueue(new StringRequest(url, listener, errorListener));
 	}
+	
+	public void postString(String url, Listener<String> listener, ErrorListener errorListener){
+		addToRequestQueue(new StringRequest(Method.POST, url, listener, errorListener));
+	}
 
 }

@@ -164,6 +164,26 @@ public class LibUtil {
 		TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 		return manager.getDeviceId();
 	}
+	
+	/**
+	 * 
+	 * 描          述 ：获取本机手机号码
+	 * 创建日期  : 2014-12-9
+	 * 作           者 ： lx
+	 * 修改日期  : 
+	 * 修   改   者 ：
+	 * @version   : 1.0
+	 * @param context
+	 * @return
+	 *
+	 */
+	public static String getPhoneNumber(Context context){
+		TelephonyManager telephonyManager=(TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		String simSerialNum = telephonyManager.getLine1Number();
+		if(!simSerialNum.isEmpty())
+			return simSerialNum.substring(simSerialNum.length()-11);
+		return simSerialNum;
+	}
 
 	/**
 	 * 

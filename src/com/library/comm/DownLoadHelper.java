@@ -36,7 +36,7 @@ public class DownLoadHelper {
 		this.handler = handler;
 	}
 	
-	public void setSaveDir(String dir){
+	public void saveDir(String dir){
 		saveDir = dir;
 	}
 	

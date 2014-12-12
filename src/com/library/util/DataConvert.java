@@ -184,6 +184,32 @@ public class DataConvert {
 			throw new BaseSTDException("在对象序列化为XML字符串时发生错误！", ex);
 		}
 	}
+	
+	/**
+	 * 
+	 * 描          述 ：对象序列化为XML字符串
+	 * 创建日期  : 2013-6-19
+	 * 作           者 ： lx
+	 * 修改日期  : (文件的修改日期)
+	 * 修   改   者 ：(文件的修改者，文件创建者之外的人)
+	 * @version   : 1.0
+	 * @param <T>
+	 * @return
+	 *
+	 */
+	public static <T> String toXMLString(T obj) {
+		try {
+			String retStr = "";
+			if (null != obj) {
+				XStream xs = new XStream();
+				retStr = xs.toXML(obj);
+			}
+			return retStr;
+		}
+		catch (Exception ex) {
+			throw new BaseSTDException("在对象序列化为XML字符串时发生错误！", ex);
+		}
+	}
 
 	/**
 	 * 

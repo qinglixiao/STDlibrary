@@ -170,6 +170,7 @@ public class DataConvert {
 			String retStr = "";
 			if (null != obj) {
 				XStream xs = new XStream();
+				xs.processAnnotations(obj.getClass());  
 				if (null != alias && alias.size() > 0) {
 					for (Iterator<String> it = alias.keySet().iterator(); it.hasNext();) {
 						String key = it.next().toString();
@@ -202,6 +203,7 @@ public class DataConvert {
 			String retStr = "";
 			if (null != obj) {
 				XStream xs = new XStream();
+				xs.processAnnotations(obj.getClass());  
 				retStr = xs.toXML(obj);
 			}
 			return retStr;
@@ -263,6 +265,7 @@ public class DataConvert {
 			List<T> retArray = null;
 			if (!TextUtils.isEmpty(objStrs)) {
 				XStream xs = new XStream();
+				xs.processAnnotations(clazz);  
 				if (null != alias && alias.size() > 0) {
 					for (Iterator<String> it = alias.keySet().iterator(); it.hasNext();) {
 						String key = it.next().toString();

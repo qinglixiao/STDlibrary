@@ -1,6 +1,7 @@
 package com.library.util;
 
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.List;
 
 import android.app.ActivityManager;
@@ -349,6 +350,7 @@ public class LibUtil {
 				root.getWindowVisibleDisplayFrame(rect);
 				// 获取root在窗体的不可视区域高度(被其他View遮挡的区域高度)
 				int rootInvisibleHeight = root.getRootView().getHeight() - rect.bottom;
+				
 				// 如果内容被遮挡则将内容上推至软键盘顶部
 				if (scrollToView.getBottom() > rect.bottom) {
 					int[] location = new int[2];
@@ -412,6 +414,41 @@ public class LibUtil {
 		return false;
 	}
 	
+	/**
+	 * 根据进程名称获取进程Id
+	 * 
+	 * @param processName
+	 * @return
+	 */
+	public static int getProcessPid(Context context, String processName) {
+		ActivityManager activityManager = (ActivityManager) context
+				.getSystemService(context.ACTIVITY_SERVICE);
+		List<RunningAppProcessInfo> procList = null;
+		int result = -1;
+		procList = activityManager.getRunningAppProcesses();
+		for (Iterator<RunningAppProcessInfo> iterator = procList.iterator(); iterator
+				.hasNext();) {
+			RunningAppProcessInfo procInfo = iterator.next();
+			if (procInfo.processName.equals(processName)) {
+				result = procInfo.pid;
+				break;
+			}
+		}
+		return result;
+	}
 	
+	public static String getProcessName(Context context) {
+		int pid = android.os.Process.myPid();
+		ActivityManager activityManager = (ActivityManager) context
+				.getSystemService(Context.ACTIVITY_SERVICE);
+		List<RunningAppProcessInfo> appProcesses = activityManager
+				.getRunningAppProcesses();
+		for (RunningAppProcessInfo appProcess : appProcesses) {
+			if (appProcess.pid == pid) {
+				return appProcess.processName;
+			}
+		}
+		return "";
+	}
 
 }

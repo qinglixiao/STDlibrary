@@ -1,5 +1,6 @@
 package com.library.util;
 
+import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.List;
@@ -49,9 +50,13 @@ public class LibUtil {
 	 * @return
 	 *
 	 */
-	public static String getAppInstallDirectory(Context context) {
+	public static String getAppHomeDirectory(Context context) {
 		String mApplicationName = context.getPackageManager().getApplicationLabel(context.getApplicationInfo()).toString();
-		return Environment.getExternalStoragePublicDirectory(mApplicationName).getPath();
+		String dir = Environment.getExternalStoragePublicDirectory(mApplicationName).getPath();
+		File file = new File(dir);
+		if(!file.exists())
+			file.mkdirs();
+		return dir;
 	}
 
 	/**
@@ -65,7 +70,7 @@ public class LibUtil {
 	 * @return
 	 *
 	 */
-	public static String getSdRootDirectory() {
+	public static String getSdCardRootDirectory() {
 		return Environment.getExternalStorageDirectory().getAbsolutePath();
 	}
 

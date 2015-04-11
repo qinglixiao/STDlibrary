@@ -2,14 +2,13 @@ package com.library.comm;
 
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
-import android.app.Notification;
 import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
-import android.opengl.Visibility;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 public class DownLoadHelper {
@@ -43,8 +42,8 @@ public class DownLoadHelper {
 
 	public long down(String uriString, String fileName) {
 		Uri uri = Uri.parse(uriString);
-		registerListener(uri);
 		downloadId = mDownloadManager.enqueue(getRequest(uri, fileName));
+		registerListener(uri);
 		return downloadId;
 	}
 
@@ -85,9 +84,11 @@ public class DownLoadHelper {
 		public void onChange(boolean selfChange) {
 			// TODO Auto-generated method stub
 			super.onChange(selfChange);
+			Log.d("LX", "onChange"+selfChange);
 			DownloadManager.Query query = new DownloadManager.Query().setFilterById(downloadId);
 			Cursor cursor = mDownloadManager.query(query);
 			while (cursor.moveToNext()) {
+				Log.d("LX", "onChange-moveToNext");
 				int mDownload_so_far = cursor.getInt(cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
 				int mDownload_all = cursor.getInt(cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
 				int mProgress = (mDownload_so_far * 99) / mDownload_all;

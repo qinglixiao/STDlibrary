@@ -357,7 +357,7 @@ public class LibUtil {
 				int rootInvisibleHeight = root.getRootView().getHeight() - rect.bottom;
 				
 				// 如果内容被遮挡则将内容上推至软键盘顶部
-				if (scrollToView.getBottom() > rect.bottom) {
+				if (rootInvisibleHeight > 100) {
 					int[] location = new int[2];
 					// 获取scrollToView在窗体的坐标
 					scrollToView.getLocationInWindow(location);

@@ -9,17 +9,17 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 public class LocationHelper {
-	// »ùÓÚGPSµÄ¾«È·¶¨Î»
+	// åŸºäºGPSçš„ç²¾ç¡®å®šä½
 	public static final int GPS = 0;
-	// »ùÓÚÍøÂçµÄ´ÖÂÔ¶¨Î»
+	// åŸºäºç½‘ç»œçš„ç²—ç•¥å®šä½
 	public static final int NETWORK = 1;
-	// ×Ô¶¯Ñ¡Ôñ×î¾«È·¶¨Î»
+	// è‡ªåŠ¨é€‰æ‹©æœ€ç²¾ç¡®å®šä½
 	public static final int BEST = 2;
-	// ×îĞ¡ÒÆ¶¯¾àÀë¸üĞÂÎ»ÖÃ
+	// æœ€å°ç§»åŠ¨è·ç¦»æ›´æ–°ä½ç½®
 	private static final long MIS_DISTANCE_UPDATE = 0;
-	// ×îÉÙÊ±¼ä¸üĞÂÎ»ÖÃ
+	// æœ€å°‘æ—¶é—´æ›´æ–°ä½ç½®
 	private static final long MIS_TIME_UPDATE = 0;
-	// Î»ÖÃ¸ü¸Ä±È½ÏÊ±¼ä£¬Ä¬ÈÏÎª1·ÖÖÓ
+	// ä½ç½®æ›´æ”¹æ¯”è¾ƒæ—¶é—´ï¼Œé»˜è®¤ä¸º1åˆ†é’Ÿ
 	private static final long COMPARE_TIME = 1000 * 60;
 
 	private Context mContext;
@@ -35,11 +35,11 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £ºÉèÖÃÎ»ÖÃ¸üĞÂ¼àÌı
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šè®¾ç½®ä½ç½®æ›´æ–°ç›‘å¬
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * @param listener
@@ -60,11 +60,11 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £º×¢²áGPSÎ»ÖÃ¸üĞÂ¼àÌı
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæ³¨å†ŒGPSä½ç½®æ›´æ–°ç›‘å¬
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * 
@@ -75,11 +75,11 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £º×¢²áÍøÂç¶¨Î»Î»ÖÃ¸üĞÂ¼àÌı
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæ³¨å†Œç½‘ç»œå®šä½ä½ç½®æ›´æ–°ç›‘å¬
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * 
@@ -90,11 +90,11 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £ºĞ¶ÔØGPSÎ»ÖÃ¸üĞÂ¼àÌı
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šå¸è½½GPSä½ç½®æ›´æ–°ç›‘å¬
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * 
@@ -105,11 +105,11 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £ºĞ¶ÔØÍøÂç¶¨Î»¸üĞÂÎ»ÖÃ¼àÌı
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šå¸è½½ç½‘ç»œå®šä½æ›´æ–°ä½ç½®ç›‘å¬
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * 
@@ -120,21 +120,21 @@ public class LocationHelper {
 
 	/**
 	 * 
-	 * Ãè Êö £º»ñÈ¡µ±Ç°Î»ÖÃ
-	 * ´´½¨ÈÕÆÚ : 2013-12-31
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šè·å–å½“å‰ä½ç½®
+	 * åˆ›å»ºæ—¥æœŸ : 2013-12-31
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
-	 * @param mode ¶¨Î»·½Ê½
+	 * @param mode å®šä½æ–¹å¼
 	 *                LocationHelper.GPS
 	 *                LocationHelper.NETWORK
 	 *                LocationHelper.BEST
 	 * 
 	 * @return
-	 *         ³É¹¦£ºµ±Ç°Î»ÖÃ
-	 *         Ê§°Ü£ºnull
+	 *         æˆåŠŸï¼šå½“å‰ä½ç½®
+	 *         å¤±è´¥ï¼šnull
 	 * 
 	 */
 	public Location getLocation(int mode) {
@@ -231,7 +231,7 @@ public class LocationHelper {
 		@Override
 		public void onStatusChanged(String provider, int status, Bundle extras) {
 			// TODO Auto-generated method stub
-			if (LocationProvider.OUT_OF_SERVICE == status) { // GPS·şÎñ¶ªÊ§,ÇĞ»»ÖÁÍøÂç¶¨Î»
+			if (LocationProvider.OUT_OF_SERVICE == status) { // GPSæœåŠ¡ä¸¢å¤±,åˆ‡æ¢è‡³ç½‘ç»œå®šä½
 				registNetWorkListener();
 			}
 			else if (LocationProvider.AVAILABLE == status) {

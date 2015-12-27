@@ -28,11 +28,11 @@ public class SecurityUtil {
 	public static class MD5 {
 		/**
 		 * 
-		 * Ãè          Êö £º¼ÓÃÜ×Ö·û´®
-		 * ´´½¨ÈÕÆÚ  : 2014-7-28
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šåŠ å¯†å­—ç¬¦ä¸²
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-28
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
 		 * @param plaintext 
 		 * @return
@@ -51,7 +51,7 @@ public class SecurityUtil {
 			}
 		}
 
-		// ¶şĞĞÖÆ×ª×Ö·û´®
+		// äºŒè¡Œåˆ¶è½¬å­—ç¬¦ä¸²
 		private static String byte2hex(byte[] b) {
 			String hs = "";
 			String stmp = "";
@@ -71,11 +71,11 @@ public class SecurityUtil {
 	public static class SHA1 {
 		/**
 		 * 
-		 * Ãè          Êö £º¼ÓÃÜ×Ö·û´®
-		 * ´´½¨ÈÕÆÚ  : 2014-7-28
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šåŠ å¯†å­—ç¬¦ä¸²
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-28
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
 		 * @param plaintext 
 		 * @return
@@ -94,7 +94,7 @@ public class SecurityUtil {
 			}
 		}
 
-		// ¶şĞĞÖÆ×ª×Ö·û´®
+		// äºŒè¡Œåˆ¶è½¬å­—ç¬¦ä¸²
 		private static String byte2hex(byte[] b) {
 			String hs = "";
 			String stmp = "";
@@ -115,14 +115,14 @@ public class SecurityUtil {
 	public static class AES {
 		/**
 		 * 
-		 * Ãè          Êö £º¼ÓÃÜ
-		 * ´´½¨ÈÕÆÚ  : 2014-7-12
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šåŠ å¯†
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-12
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
-		 * @param pwd ÃÜÂë
-		 * @param plaintext Ã÷ÎÄ
+		 * @param pwd å¯†ç 
+		 * @param plaintext æ˜æ–‡
 		 * @return
 		 *
 		 */
@@ -142,14 +142,14 @@ public class SecurityUtil {
 
 		/**
 		 * 
-		 * Ãè          Êö £º½âÃÜ
-		 * ´´½¨ÈÕÆÚ  : 2014-7-12
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šè§£å¯†
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-12
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
-		 * @param pwd ÃÜÂë
-		 * @param encryptext ÃÜÎÄ
+		 * @param pwd å¯†ç 
+		 * @param encryptext å¯†æ–‡
 		 * @return
 		 *
 		 */
@@ -228,20 +228,20 @@ public class SecurityUtil {
 	}
 	
 	public static class RSA {
-		/**Ç©ÃûËã·¨*/
+		/**ç­¾åç®—æ³•*/
 		private static final String SIGN_ARITHMETIC = "SHA1WithRSA";
 
 		/**
 		 * 
-		 * Ãè          Êö £º¶Ô×Ö·û´®½øĞĞÇ©Ãû
-		 * ´´½¨ÈÕÆÚ  : 2014-7-9
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šå¯¹å­—ç¬¦ä¸²è¿›è¡Œç­¾å
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-9
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
-		 * @param content ÒªÇ©ÃûµÄ×Ö·û´®
-		 * @param privateKey ¾­¹ıBase64±àÂë¹ıµÄË½Ô¿
-		 * @return Ç©Ãû¹ıµÄBase64±àÂë×Ö·û´®
+		 * @param content è¦ç­¾åçš„å­—ç¬¦ä¸²
+		 * @param privateKey ç»è¿‡Base64ç¼–ç è¿‡çš„ç§é’¥
+		 * @return ç­¾åè¿‡çš„Base64ç¼–ç å­—ç¬¦ä¸²
 		 *
 		 */
 		public static String sign(String plaintext, String privateKey) {
@@ -265,13 +265,13 @@ public class SecurityUtil {
 		}
 
 		/**
-		* RSAÇ©Ãû¼ì²é
-		* @param content Î´Ç©ÃûµÄÔ­ÎÄ
-		* @param sign Ç©Ãû´®
-		* @param publicKey ¹«Ô¿
+		* RSAç­¾åæ£€æŸ¥
+		* @param content æœªç­¾åçš„åŸæ–‡
+		* @param sign ç­¾åä¸²
+		* @param publicKey å…¬é’¥
 		* @return
-		* 	true: Ô­ÎÄÒ»ÖÂ
-		* 	false:²»Ò»ÖÂ
+		* 	true: åŸæ–‡ä¸€è‡´
+		* 	false:ä¸ä¸€è‡´
 		*/
 		public static boolean verify(String plaintext, String sign, String publicKey) {
 			try {
@@ -295,14 +295,14 @@ public class SecurityUtil {
 
 		/**
 		 * 
-		 * Ãè          Êö £º½âÃÜ
-		 * ´´½¨ÈÕÆÚ  : 2014-7-9
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šè§£å¯†
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-9
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
-		 * @param encryptext ÃÜÎÄ
-		 * @param privateKey Ë½Ô¿
+		 * @param encryptext å¯†æ–‡
+		 * @param privateKey ç§é’¥
 		 * @return
 		 * @throws Exception
 		 *
@@ -314,7 +314,7 @@ public class SecurityUtil {
 				KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 				PrivateKey privateK = keyFactory.generatePrivate(pkcs8KeySpec);
 
-				//rsa½âÃÜµÄ×Ö½Ú´óĞ¡×î¶àÊÇ128£¬½«ĞèÒª½âÃÜµÄÄÚÈİ£¬°´128Î»²ğ¿ª½âÃÜ
+				//rsaè§£å¯†çš„å­—èŠ‚å¤§å°æœ€å¤šæ˜¯128ï¼Œå°†éœ€è¦è§£å¯†çš„å†…å®¹ï¼ŒæŒ‰128ä½æ‹†å¼€è§£å¯†
 				int decrylength = 128;
 				Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
 				cipher.init(Cipher.DECRYPT_MODE, privateK);
@@ -323,7 +323,7 @@ public class SecurityUtil {
 				int offSet = 0;
 				byte[] cache;
 				int i = 0;
-				// ¶ÔÊı¾İ·Ö¶Î½âÃÜ
+				// å¯¹æ•°æ®åˆ†æ®µè§£å¯†
 				while (inputLen - offSet > 0) {
 					if (inputLen - offSet > decrylength) {
 						cache = cipher.doFinal(encryptedData, offSet, decrylength);
@@ -346,14 +346,14 @@ public class SecurityUtil {
 
 		/**
 		 * 
-		 * Ãè          Êö £º¼ÓÃÜ
-		 * ´´½¨ÈÕÆÚ  : 2014-7-10
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šåŠ å¯†
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-10
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
-		 * @param plaintext Ã÷ÎÄ
-		 * @param publicKey ¹«Ô¿£¨¾­¹ıBase64±àÂë£©
+		 * @param plaintext æ˜æ–‡
+		 * @param publicKey å…¬é’¥ï¼ˆç»è¿‡Base64ç¼–ç ï¼‰
 		 * @return
 		 *
 		 */
@@ -364,7 +364,7 @@ public class SecurityUtil {
 				KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 				PublicKey publicK = keyFactory.generatePublic(x509KeySpec);
 
-				//RSA×î´ó¼ÓÃÜ117¸ö×Ö·û£¬ÏÂÃæ²ÉÓÃ·Ö¶Î¼ÓÃÜ
+				//RSAæœ€å¤§åŠ å¯†117ä¸ªå­—ç¬¦ï¼Œä¸‹é¢é‡‡ç”¨åˆ†æ®µåŠ å¯†
 				int encryLength = 117;
 				Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
 				cipher.init(Cipher.ENCRYPT_MODE, publicK);
@@ -373,7 +373,7 @@ public class SecurityUtil {
 				int offSet = 0;
 				byte[] cache;
 				int i = 0;
-				// ¶ÔÊı¾İ·Ö¶Î¼ÓÃÜ
+				// å¯¹æ•°æ®åˆ†æ®µåŠ å¯†
 				while (inputLen - offSet > 0) {
 					if (inputLen - offSet > encryLength) {
 						cache = cipher.doFinal(data, offSet, encryLength);
@@ -397,16 +397,16 @@ public class SecurityUtil {
 
 		/**
 		 * 
-		 * Ãè          Êö £ºÉú³ÉRSAÃÜÔ¿¶Ô(¾­¹ıBase64±àÂë)
-		 * ´´½¨ÈÕÆÚ  : 2014-7-9
-		 * ×÷           Õß £º lx
-		 * ĞŞ¸ÄÈÕÆÚ  : 
-		 * ĞŞ   ¸Ä   Õß £º
+		 * æ          è¿° ï¼šç”ŸæˆRSAå¯†é’¥å¯¹(ç»è¿‡Base64ç¼–ç )
+		 * åˆ›å»ºæ—¥æœŸ  : 2014-7-9
+		 * ä½œ           è€… ï¼š lx
+		 * ä¿®æ”¹æ—¥æœŸ  : 
+		 * ä¿®   æ”¹   è€… ï¼š
 		 * @version   : 1.0
 		 * @return
-		 * ÃÜÔ¿¶Ô£º
-		 * 	Ë½Ô¿key:"privateKey"
-		 * 	¹«Ô¿key:"publicKey"
+		 * å¯†é’¥å¯¹ï¼š
+		 * 	ç§é’¥key:"privateKey"
+		 * 	å…¬é’¥key:"publicKey"
 		 */
 		public static Map<String, String> generateKeyPair() {
 			try {

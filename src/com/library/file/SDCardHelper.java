@@ -34,24 +34,24 @@ import com.library.exception.FileAccessException;
 import com.library.util.LibUtil;
 
 /**
- * Ãè Êö £ºSD¿¨´æÈ¡ÎÄ¼ş
- * ´´ ½¨ ÈÕ ÆÚ : 2013-6-24
- * ×÷ Õß £º lx
- * ĞŞ ¸Ä ÈÕ ÆÚ :
- * ĞŞ ¸Ä Õß £º
+ * æ è¿° ï¼šSDå¡å­˜å–æ–‡ä»¶
+ * åˆ› å»º æ—¥ æœŸ : 2013-6-24
+ * ä½œ è€… ï¼š lx
+ * ä¿® æ”¹ æ—¥ æœŸ :
+ * ä¿® æ”¹ è€… ï¼š
  * 
  * @version : 1.0
  */
 public class SDCardHelper implements IStorageOperator {
-	// ÎÄ¼ş
+	// æ–‡ä»¶
 	private File mFile;
-	// Êä³öÁ÷
+	// è¾“å‡ºæµ
 	private BufferedWriter mBufferedWriter;
 	private BufferedOutputStream mBufferedOutputStream;
-	// ÊäÈëÁ÷
+	// è¾“å…¥æµ
 	private BufferedReader mBufferedReader;
 	private BufferedInputStream mBufferedInputStream;
-	// Éè±¸ÉÏÏÂÎÄ
+	// è®¾å¤‡ä¸Šä¸‹æ–‡
 	private Context mContext;
 
 	public SDCardHelper(Context context) {
@@ -60,9 +60,9 @@ public class SDCardHelper implements IStorageOperator {
 
 	public void openOrCreateFile(String dir, String fileName) {
 		mFile = new File(dir, fileName);
-		if(!mFile.isFile())//´´½¨Ä¿Â¼
+		if(!mFile.isFile())//åˆ›å»ºç›®å½•
 			new File(mFile.getParent()).mkdirs();
-		if(!mFile.exists())//Èç¹ûÎÄ¼ş²»´æÔÚÔò´´½¨ÎÄ¼ş
+		if(!mFile.exists())//å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨åˆ™åˆ›å»ºæ–‡ä»¶
 			try {
 				mFile.createNewFile();
 			}
@@ -79,12 +79,12 @@ public class SDCardHelper implements IStorageOperator {
 			if (mFile == null) {
 				return false;
 			}
-			// ´ò¿ªÊä³öÁ÷
+			// æ‰“å¼€è¾“å‡ºæµ
 			FileOutputStream fileOutputStream = new FileOutputStream(mFile, true);
 			PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(fileOutputStream, "UTF-8"));
 			mBufferedWriter = new BufferedWriter(printWriter);
 			mBufferedOutputStream = new BufferedOutputStream(fileOutputStream);
-			// ´ò¿ªÊäÈëÁ÷
+			// æ‰“å¼€è¾“å…¥æµ
 			FileInputStream fileInputStream = new FileInputStream(mFile);
 			InputStreamReader inputStrReader = new InputStreamReader(fileInputStream, "UTF-8");
 			mBufferedReader = new BufferedReader(inputStrReader);
@@ -93,11 +93,11 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş²»´æÔÚ", e);
+			throw new FileAccessException("æ–‡ä»¶ä¸å­˜åœ¨", e);
 		}
 		catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş±àÂë²»±»Ö§³Ö", e);
+			throw new FileAccessException("æ–‡ä»¶ç¼–ç ä¸è¢«æ”¯æŒ", e);
 		}
 	}
 
@@ -114,7 +114,7 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("Ğ´ÈëÎÄ¼şÊ±³öÏÖÒì³££¡", e);
+			throw new FileAccessException("å†™å…¥æ–‡ä»¶æ—¶å‡ºç°å¼‚å¸¸ï¼", e);
 		}
 	}
 
@@ -133,7 +133,7 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("Ğ´ÈëÊ§°Ü£¡", e);
+			throw new FileAccessException("å†™å…¥å¤±è´¥ï¼", e);
 		}
 
 	}
@@ -154,7 +154,7 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("¶ÁÈ¡ÎÄ¼şÊ±³öÏÖÒì³££¡", e);
+			throw new FileAccessException("è¯»å–æ–‡ä»¶æ—¶å‡ºç°å¼‚å¸¸ï¼", e);
 		}
 
 	}
@@ -167,7 +167,7 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("·µ»ØÊı¾İÁ÷Ê±³öÏÖÒì³£", e);
+			throw new FileAccessException("è¿”å›æ•°æ®æµæ—¶å‡ºç°å¼‚å¸¸", e);
 		}
 	}
 
@@ -185,7 +185,7 @@ public class SDCardHelper implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş¹Ø±ÕÊ±³öÏÖÒì³£", e);
+			throw new FileAccessException("æ–‡ä»¶å…³é—­æ—¶å‡ºç°å¼‚å¸¸", e);
 		}
 		finally {
 			mBufferedReader = null;
@@ -208,13 +208,13 @@ public class SDCardHelper implements IStorageOperator {
 
 	/**
 	 * 
-	 * Ãè          Êö £º¼¶ÁªÉ¾³ıÎÄ¼ş/Ä¿Â¼£¬Èç¹ûÎªÄ¿Â¼ÔòÉ¾³ı¸ÃÄ¿Â¼ÏÂËùÓĞÄÚÈİ°üÀ¨´ËÄ¿Â¼
-	 * ´´½¨ÈÕÆÚ  : 2014-7-31
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 * æ          è¿° ï¼šçº§è”åˆ é™¤æ–‡ä»¶/ç›®å½•ï¼Œå¦‚æœä¸ºç›®å½•åˆ™åˆ é™¤è¯¥ç›®å½•ä¸‹æ‰€æœ‰å†…å®¹åŒ…æ‹¬æ­¤ç›®å½•
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-7-31
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
-	 * @param path Ä¿Â¼/ÎÄ¼ş
+	 * @param path ç›®å½•/æ–‡ä»¶
 	 *
 	 */
 	public void delete(String path) {
@@ -298,7 +298,7 @@ public class SDCardHelper implements IStorageOperator {
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			//·´ĞòÁĞ»¯Ê§°Ü - É¾³ı»º´æÎÄ¼ş
+			//ååºåˆ—åŒ–å¤±è´¥ - åˆ é™¤ç¼“å­˜æ–‡ä»¶
 			if (e instanceof InvalidClassException) {
 				File data = mContext.getFileStreamPath(fullName);
 				data.delete();

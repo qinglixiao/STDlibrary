@@ -21,12 +21,12 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 
 public class LibUtil {
 	/**
-	 * 
-	 * Ãè          Êö £º¼ì²éÍâ²¿´æ´¢Éè±¸ÊÇÊÇ·ñ¿ÉÓÃ
-	 * ´´½¨ÈÕÆÚ  : 2013-11-25
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šæ£€æŸ¥å¤–éƒ¨å­˜å‚¨è®¾å¤‡æ˜¯æ˜¯å¦å¯ç”¨
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-11-25
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @return
 	 *
@@ -39,12 +39,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡Ó¦ÓÃÔÚSD¿¨µÄ°²×°Ä¿Â¼
-	 * ´´½¨ÈÕÆÚ  : 2013-11-25
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–åº”ç”¨åœ¨SDå¡çš„å®‰è£…ç›®å½•
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-11-25
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -60,12 +60,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡SD¿¨¸ùÄ¿Â¼
-	 * ´´½¨ÈÕÆÚ  : 2013-11-25
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–SDå¡æ ¹ç›®å½•
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-11-25
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @return
 	 *
@@ -75,12 +75,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡Ó¦ÓÃ»º´æÄ¿Â¼(ÄÚ´æ)
-	 * ´´½¨ÈÕÆÚ  : 2014-7-30
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–åº”ç”¨ç¼“å­˜ç›®å½•(å†…å­˜)
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-7-30
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -91,12 +91,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡SD¿¨ÉÏµÄÏÂÔØÄ¿Â¼
-	 * ´´½¨ÈÕÆÚ  : 2013-11-26
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–SDå¡ä¸Šçš„ä¸‹è½½ç›®å½•
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-11-26
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @return
 	 *
@@ -106,48 +106,48 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºÍ¨¹ı¸ø¶¨µÄÍ¼Æ¬Ãû»ñÈ¡¶ÔÓ¦µÄ×ÊÔ´ID
-	 * ´´½¨ÈÕÆÚ  : 2014-1-27
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : ¡¤
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šé€šè¿‡ç»™å®šçš„å›¾ç‰‡åè·å–å¯¹åº”çš„èµ„æºID
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-1-27
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : Â·
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @param drawableName
 	 * @return
-	 * ²éÕÒ³É¹¦·µ»Ø£ºid
-	 *Ê§°Ü·µ»Ø£º0
+	 * æŸ¥æ‰¾æˆåŠŸè¿”å›ï¼šid
+	 *å¤±è´¥è¿”å›ï¼š0
 	 */
 	public int getDrawableId(Context context, String drawableName) {
 		return context.getResources().getIdentifier(drawableName, "drawable", context.getPackageName());
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºÍ¨¹ı¸ø¶¨µÄ²¼¾ÖÎÄ¼şÃû»ñÈ¡¶ÔÓ¦µÄ×ÊÔ´ID
-	 * ´´½¨ÈÕÆÚ  : 2014-1-27
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : ¡¤
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šé€šè¿‡ç»™å®šçš„å¸ƒå±€æ–‡ä»¶åè·å–å¯¹åº”çš„èµ„æºID
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-1-27
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : Â·
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @param layoutName
 	 * @return
-	 * ²éÕÒ³É¹¦·µ»Ø£ºid
-	 *Ê§°Ü·µ»Ø£º0
+	 * æŸ¥æ‰¾æˆåŠŸè¿”å›ï¼šid
+	 *å¤±è´¥è¿”å›ï¼š0
 	 */
 	public int getLayoutId(Context context, String layoutName) {
 		return context.getResources().getIdentifier(layoutName, "layout", context.getPackageName());
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºÅĞ¶ÏÍøÂçÊÇ·ñ¿ÉÓÃ
-	 * ´´½¨ÈÕÆÚ  : 2014-6-11
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šåˆ¤æ–­ç½‘ç»œæ˜¯å¦å¯ç”¨
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-6-11
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -161,10 +161,10 @@ public class LibUtil {
 		else
 			return false;
 	}
-	
+
 	/**
-	 * ÍøÂçÊÇ·ñÒÑÁ¬½Ó
-	 * 
+	 * ç½‘ç»œæ˜¯å¦å·²è¿æ¥
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -174,10 +174,10 @@ public class LibUtil {
 				.getActiveNetworkInfo();
 		return networkInfo != null && networkInfo.isConnected();
 	}
-	
+
 	/**
-	 * CmwapÍøÂçÊÇ·ñÒÑÁ¬½Ó
-	 * 
+	 * Cmwapç½‘ç»œæ˜¯å¦å·²è¿æ¥
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -189,10 +189,10 @@ public class LibUtil {
 				&& networkInfo.getExtraInfo() != null
 				&& networkInfo.getExtraInfo().toLowerCase().contains("cmwap");
 	}
-	
+
 	/**
-	 * WifiÍøÂçÊÇ·ñÒÑÁ¬½Ó
-	 * 
+	 * Wifiç½‘ç»œæ˜¯å¦å·²è¿æ¥
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -204,12 +204,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡Éè±¸´®ºÅ
-	 * ´´½¨ÈÕÆÚ  : 2014-6-25
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–è®¾å¤‡ä¸²å·
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-6-25
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -221,12 +221,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡±¾»úÊÖ»úºÅÂë
-	 * ´´½¨ÈÕÆÚ  : 2014-12-9
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–æœ¬æœºæ‰‹æœºå·ç 
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-12-9
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -241,12 +241,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºÊÇ·ñ¾ßÓĞ²Ù×÷SD¿¨È¨ÏŞ
-	 * ´´½¨ÈÕÆÚ  : 2014-9-10
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šæ˜¯å¦å…·æœ‰æ“ä½œSDå¡æƒé™
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-9-10
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -259,12 +259,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £º»ñÈ¡ÊÖ»ú×´Ì¬À¸¸ß¶È
-	 * ´´½¨ÈÕÆÚ  : 2014-11-28
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šè·å–æ‰‹æœºçŠ¶æ€æ é«˜åº¦
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-11-28
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @return
@@ -289,12 +289,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºdpµ¥Î»×ª»¯Îªpx(ÏµÍ³×Ô´ø´¦Àí·½Ê½)
-	 * ´´½¨ÈÕÆÚ  : 2014-11-30
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šdpå•ä½è½¬åŒ–ä¸ºpx(ç³»ç»Ÿè‡ªå¸¦å¤„ç†æ–¹å¼)
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-11-30
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @param dp
@@ -304,14 +304,14 @@ public class LibUtil {
 	public static float convertDpToPx(Context context, float dp) {
 		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
 	}
-	
+
 	/**
-	 * 
-	 * Ãè          Êö £ºspµ¥Î»×ª»¯Îªpx(ÏµÍ³×Ô´ø´¦Àí·½Ê½)
-	 * ´´½¨ÈÕÆÚ  : 2014-11-30
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼šspå•ä½è½¬åŒ–ä¸ºpx(ç³»ç»Ÿè‡ªå¸¦å¤„ç†æ–¹å¼)
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-11-30
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @param dp
@@ -323,12 +323,12 @@ public class LibUtil {
 	}
 
 	/**
-	 * 
-	 * Ãè          Êö £ºpxµ¥Î»×ª»¯Îªdp£¨ÏµÍ³´¦Àí·½Ê½£©
-	 * ´´½¨ÈÕÆÚ  : 2014-11-30
-	 * ×÷           Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ  : 
-	 * ĞŞ   ¸Ä   Õß £º
+	 *
+	 * æ          è¿° ï¼špxå•ä½è½¬åŒ–ä¸ºdpï¼ˆç³»ç»Ÿå¤„ç†æ–¹å¼ï¼‰
+	 * åˆ›å»ºæ—¥æœŸ  : 2014-11-30
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : 
+	 * ä¿®   æ”¹   è€… ï¼š
 	 * @version   : 1.0
 	 * @param context
 	 * @param px
@@ -340,42 +340,42 @@ public class LibUtil {
 		return px / scale;
 	}
 
-	/**½«Èí¼üÅÌÕÚ¸ÇµÄ²¿·ÖÍÆÖÁ¶¥²¿
+	/**å°†è½¯é”®ç›˜é®ç›–çš„éƒ¨åˆ†æ¨è‡³é¡¶éƒ¨
 	 * @param root
-	 *            ×îÍâ²ã²¼¾Ö£¬ĞèÒªµ÷ÕûµÄ²¼¾Ö
+	 *            æœ€å¤–å±‚å¸ƒå±€ï¼Œéœ€è¦è°ƒæ•´çš„å¸ƒå±€
 	 * @param scrollToView
-	 *            ±»¼üÅÌÕÚµ²µÄscrollToView£¬¹ö¶¯root,Ê¹scrollToViewÔÚroot¿ÉÊÓÇøÓòµÄµ×²¿
+	 *            è¢«é”®ç›˜é®æŒ¡çš„scrollToViewï¼Œæ»šåŠ¨root,ä½¿scrollToViewåœ¨rootå¯è§†åŒºåŸŸçš„åº•éƒ¨
 	 */
 	private void controlKeyboardLayout(final View root, final View scrollToView) {
 		root.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 			@Override
 			public void onGlobalLayout() {
 				Rect rect = new Rect();
-				// »ñÈ¡rootÔÚ´°ÌåµÄ¿ÉÊÓÇøÓò
+				// è·å–rootåœ¨çª—ä½“çš„å¯è§†åŒºåŸŸ
 				root.getWindowVisibleDisplayFrame(rect);
-				// »ñÈ¡rootÔÚ´°ÌåµÄ²»¿ÉÊÓÇøÓò¸ß¶È(±»ÆäËûViewÕÚµ²µÄÇøÓò¸ß¶È)
+				// è·å–rootåœ¨çª—ä½“çš„ä¸å¯è§†åŒºåŸŸé«˜åº¦(è¢«å…¶ä»–Viewé®æŒ¡çš„åŒºåŸŸé«˜åº¦)
 				int rootInvisibleHeight = root.getRootView().getHeight() - rect.bottom;
-				
-				// Èç¹ûÄÚÈİ±»ÕÚµ²Ôò½«ÄÚÈİÉÏÍÆÖÁÈí¼üÅÌ¶¥²¿
+
+				// å¦‚æœå†…å®¹è¢«é®æŒ¡åˆ™å°†å†…å®¹ä¸Šæ¨è‡³è½¯é”®ç›˜é¡¶éƒ¨
 				if (rootInvisibleHeight > 100) {
 					int[] location = new int[2];
-					// »ñÈ¡scrollToViewÔÚ´°ÌåµÄ×ø±ê
+					// è·å–scrollToViewåœ¨çª—ä½“çš„åæ ‡
 					scrollToView.getLocationInWindow(location);
-					// ¼ÆËãroot¹ö¶¯¸ß¶È£¬Ê¹scrollToViewÔÚ¿É¼ûÇøÓò
+					// è®¡ç®—rootæ»šåŠ¨é«˜åº¦ï¼Œä½¿scrollToViewåœ¨å¯è§åŒºåŸŸ
 					int srollHeight = (location[1] + scrollToView.getHeight()) - rect.bottom;
 					root.scrollTo(0, srollHeight);
 				}
 				else {
-					// ¼üÅÌÒş²Ø
+					// é”®ç›˜éšè—
 					root.scrollTo(0, 0);
 				}
 			}
 		});
 	}
-	
+
 	/**
-	 * »ñÈ¡°æ±¾Ãû³Æ
-	 * 
+	 * è·å–ç‰ˆæœ¬åç§°
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -389,10 +389,10 @@ public class LibUtil {
 		}
 		return versionName;
 	}
-	
+
 	/**
-	 * ¸ù¾İ°üÃûÅĞ¶ÏÓ¦ÓÃÊÇ·ñÔÚÇ°Ì¨ÔËĞĞ
-	 * 
+	 * æ ¹æ®åŒ…ååˆ¤æ–­åº”ç”¨æ˜¯å¦åœ¨å‰å°è¿è¡Œ
+	 *
 	 * @param context
 	 * @param packageName
 	 * @return
@@ -418,10 +418,10 @@ public class LibUtil {
 		}
 		return false;
 	}
-	
+
 	/**
-	 * ¸ù¾İ½ø³ÌÃû³Æ»ñÈ¡½ø³ÌId
-	 * 
+	 * æ ¹æ®è¿›ç¨‹åç§°è·å–è¿›ç¨‹Id
+	 *
 	 * @param processName
 	 * @return
 	 */
@@ -441,7 +441,7 @@ public class LibUtil {
 		}
 		return result;
 	}
-	
+
 	public static String getProcessName(Context context) {
 		int pid = android.os.Process.myPid();
 		ActivityManager activityManager = (ActivityManager) context

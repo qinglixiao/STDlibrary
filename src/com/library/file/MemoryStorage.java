@@ -31,23 +31,23 @@ import com.library.exception.BaseSTDException;
 import com.library.exception.FileAccessException;
 
 /**
- * Ãè Êö £ºÄÚ´æ´æÈ¡ÎÄ¼ş
- * ´´ ½¨ ÈÕ ÆÚ : 2013-6-26
- * ×÷ Õß £º lx
- * ĞŞ ¸Ä ÈÕ ÆÚ :
- * ĞŞ ¸Ä Õß £º
+ * æ è¿° ï¼šå†…å­˜å­˜å–æ–‡ä»¶
+ * åˆ› å»º æ—¥ æœŸ : 2013-6-26
+ * ä½œ è€… ï¼š lx
+ * ä¿® æ”¹ æ—¥ æœŸ :
+ * ä¿® æ”¹ è€… ï¼š
  * @version : 1.0
  */
 public class MemoryStorage implements IStorageOperator {
-	// ÉÏÏÂÎÄ
+	// ä¸Šä¸‹æ–‡
 	private Context mContext;
-	// Êä³öÁ÷
+	// è¾“å‡ºæµ
 	private FileOutputStream mFileOutputStream;
-	// ÊäÈëÁ÷
+	// è¾“å…¥æµ
 	private FileInputStream mFileInputStream;
-	// Êä³ö»º³åÁ÷
+	// è¾“å‡ºç¼“å†²æµ
 	private BufferedWriter mBufferedWriter;
-	// ÊäÈë»º³åÁ÷
+	// è¾“å…¥ç¼“å†²æµ
 	private BufferedReader mBufferedReader;
 
 	public MemoryStorage(Context context) {
@@ -64,11 +64,11 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş´´½¨Ê§°Ü£¡", e);
+			throw new FileAccessException("æ–‡ä»¶åˆ›å»ºå¤±è´¥ï¼", e);
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş´´½¨Ê§°Ü£¡", e);
+			throw new FileAccessException("æ–‡ä»¶åˆ›å»ºå¤±è´¥ï¼", e);
 		}
 
 	}
@@ -76,12 +76,12 @@ public class MemoryStorage implements IStorageOperator {
 	private boolean open(String name) {
 		// TODO Auto-generated method stub
 		try {
-			// ´ò¿ªÊä³öÁ÷
+			// æ‰“å¼€è¾“å‡ºæµ
 			mFileOutputStream = mContext.openFileOutput(name, Context.MODE_APPEND|Context.MODE_WORLD_READABLE|Context.MODE_WORLD_WRITEABLE);
 			PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(mFileOutputStream, "UTF-8"));
 			mBufferedWriter = new BufferedWriter(printWriter);
 
-			// ´ò¿ªÊäÈëÁ÷
+			// æ‰“å¼€è¾“å…¥æµ
 			mFileInputStream = mContext.openFileInput(name);
 			InputStreamReader inputStrReader = new InputStreamReader(mFileInputStream, "UTF-8");
 			mBufferedReader = new BufferedReader(inputStrReader);
@@ -90,11 +90,11 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş²»´æÔÚ", e);
+			throw new FileAccessException("æ–‡ä»¶ä¸å­˜åœ¨", e);
 		}
 		catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş±àÂëÒì³£", e);
+			throw new FileAccessException("æ–‡ä»¶ç¼–ç å¼‚å¸¸", e);
 		}
 	}
 
@@ -111,7 +111,7 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("Ğ´ÈëÎÄ¼şÊ±³öÏÖÒì³££¡", e);
+			throw new FileAccessException("å†™å…¥æ–‡ä»¶æ—¶å‡ºç°å¼‚å¸¸ï¼", e);
 		}
 	}
 
@@ -125,7 +125,7 @@ public class MemoryStorage implements IStorageOperator {
 			return -1;
 		}
 		try {
-			// ½«ÊäÈëÁ÷×ªÂë
+			// å°†è¾“å…¥æµè½¬ç 
 			InputStreamReader inputStrReader = new InputStreamReader(stream, "UTF-8");
 			BufferedReader reader = new BufferedReader(inputStrReader);
 			String line = "";
@@ -137,7 +137,7 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("Ğ´ÈëÊ§°Ü£¡", e);
+			throw new FileAccessException("å†™å…¥å¤±è´¥ï¼", e);
 		}
 	}
 
@@ -157,7 +157,7 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("¶ÁÈ¡ÎÄ¼şÊ±³öÏÖÒì³££¡", e);
+			throw new FileAccessException("è¯»å–æ–‡ä»¶æ—¶å‡ºç°å¼‚å¸¸ï¼", e);
 		}
 
 	}
@@ -181,7 +181,7 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
-			throw new FileAccessException("ÎÄ¼ş¹Ø±ÕÊ±³öÏÖÒì³£", e);
+			throw new FileAccessException("æ–‡ä»¶å…³é—­æ—¶å‡ºç°å¼‚å¸¸", e);
 		}
 		finally {
 			mBufferedReader = null;
@@ -200,7 +200,7 @@ public class MemoryStorage implements IStorageOperator {
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			throw new BaseSTDException("ÎÄ¼şÉ¾³ıÊ§°Ü£¡");
+			throw new BaseSTDException("æ–‡ä»¶åˆ é™¤å¤±è´¥ï¼");
 		}
 	}
 
@@ -269,7 +269,7 @@ public class MemoryStorage implements IStorageOperator {
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			//·´ĞòÁĞ»¯Ê§°Ü - É¾³ı»º´æÎÄ¼ş
+			//ååºåˆ—åŒ–å¤±è´¥ - åˆ é™¤ç¼“å­˜æ–‡ä»¶
 			if(e instanceof InvalidClassException){
 				File data = mContext.getFileStreamPath(key);
 				data.delete();

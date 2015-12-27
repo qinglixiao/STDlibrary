@@ -15,27 +15,27 @@ import com.thoughtworks.xstream.mapper.CannotResolveClassException;
 
 /**
  * 
- * Ãè          Êö £ºÊý¾Ý×ª»»¹¤¾ßÀà
- * ÊµÏÖJson¡¢XmlÓëjava¶ÔÏóµÄÏà»¥×ª»¯
- * ´´½¨ÈÕÆÚ  : 2013-6-17
- * ×÷           Õß £º lx
- * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
- * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+ * æ          è¿° ï¼šæ•°æ®è½¬æ¢å·¥å…·ç±»
+ * å®žçŽ°Jsonã€Xmlä¸Žjavaå¯¹è±¡çš„ç›¸äº’è½¬åŒ–
+ * åˆ›å»ºæ—¥æœŸ  : 2013-6-17
+ * ä½œ           è€… ï¼š lx
+ * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+ * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
  * @version   : 1.0
  */
 public class DataConvert {
 
 	/**
 	 * 
-	 * Ãè          Êö £º½«json¸ñÊ½µÄ¶ÔÏóÁ÷×ª³É³ÉTÀàÐÍ¶ÔÏó
-	 * ´´½¨ÈÕÆÚ  : 2013-6-18
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå°†jsonæ ¼å¼çš„å¯¹è±¡æµè½¬æˆæˆTç±»åž‹å¯¹è±¡
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-18
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
-	 * @param objStr£ºjsonÊý¾ÝÁ÷
-	 * @param clazz £ºÄ¿±ê¶ÔÏóÀàÐÍ
+	 * @param objStrï¼šjsonæ•°æ®æµ
+	 * @param clazz ï¼šç›®æ ‡å¯¹è±¡ç±»åž‹
 	 * @return
 	 *
 	 */
@@ -51,43 +51,43 @@ public class DataConvert {
 			throw new DataConvertException(ex);
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚJSON¸ñÊ½Êý¾Ý×ª»»Ê±´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨JSONæ ¼å¼æ•°æ®è½¬æ¢æ—¶é”™è¯¯ï¼", ex);
 		}
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º½«xml¸ñÊ½µÄ¶ÔÏóÁ÷×ª³É³ÉTÀàÐÍ¶ÔÏó
-	 * ´´½¨ÈÕÆÚ  : 2013-6-18
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå°†xmlæ ¼å¼çš„å¯¹è±¡æµè½¬æˆæˆTç±»åž‹å¯¹è±¡
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-18
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
-	 * @param clazz £ºÄ¿±ê¶ÔÏóÀàÐÍ
+	 * @param clazz ï¼šç›®æ ‡å¯¹è±¡ç±»åž‹
 	 * @return
 	 *
 	 */
 	public static <T> T parseObjectFromXML(String xmlString, Class<T> clazz) {
 		XStream xStream = new XStream();
-		xStream.alias(clazz.getSimpleName().toLowerCase(), clazz);//½«xml¸ù½áµãÃûÓëÀà¶ÔÓ¦£¨ÊÊÓ¦ÓÚxml¸ù½áµãÃû¸úÀàÃûÒ»ÖÂµÄÇé¿öÏÂ£©
-		xStream.processAnnotations(clazz); //Èç¹ûÓÐ×¢½âÔòÓ¦ÓÃ£¬Èç¹û²»¼Ó´Ë¾äÔò×¢½â²»»áÉúÐ§
+		xStream.alias(clazz.getSimpleName().toLowerCase(), clazz);//å°†xmlæ ¹ç»“ç‚¹åä¸Žç±»å¯¹åº”ï¼ˆé€‚åº”äºŽxmlæ ¹ç»“ç‚¹åè·Ÿç±»åä¸€è‡´çš„æƒ…å†µä¸‹ï¼‰
+		xStream.processAnnotations(clazz); //å¦‚æžœæœ‰æ³¨è§£åˆ™åº”ç”¨ï¼Œå¦‚æžœä¸åŠ æ­¤å¥åˆ™æ³¨è§£ä¸ä¼šç”Ÿæ•ˆ
 		T reobj = (T) xStream.fromXML(xmlString);
 		return reobj;
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º½«xml¸ñÊ½µÄ¶ÔÏóÁ÷×ª»»³ÉTÀàÐÍ¶ÔÏó
-	 * ´´½¨ÈÕÆÚ  : 2013-6-19
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå°†xmlæ ¼å¼çš„å¯¹è±¡æµè½¬æ¢æˆTç±»åž‹å¯¹è±¡
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-19
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
-	 * @param objStr xmlÊý¾ÝÁ÷
-	 * @param clazz  Ä¿±ê¶ÔÏóÀàÐÍ
-	 * @param alias  ÀàÐÍ±ðÃû¼¯ºÏ£¬Ö÷ÒªÊµÏÖxml½ÚµãÃûÓë¾ßÌå¶ÔÏóÊôÐÔÃûµÄ¶ÔÓ¦¡£<xml½ÚµãÃû£¬¶ÔÏóÊôÐÔÃû>
+	 * @param objStr xmlæ•°æ®æµ
+	 * @param clazz  ç›®æ ‡å¯¹è±¡ç±»åž‹
+	 * @param alias  ç±»åž‹åˆ«åé›†åˆï¼Œä¸»è¦å®žçŽ°xmlèŠ‚ç‚¹åä¸Žå…·ä½“å¯¹è±¡å±žæ€§åçš„å¯¹åº”ã€‚<xmlèŠ‚ç‚¹åï¼Œå¯¹è±¡å±žæ€§å>
 	 *  
 	 * @return
 	 *
@@ -99,7 +99,7 @@ public class DataConvert {
 			if (!TextUtils.isEmpty(objStr)) {
 				XStream xs = new XStream();
 				xs.alias(clazz.getSimpleName().toLowerCase(), clazz);
-				xs.processAnnotations(clazz); //Èç¹ûÓÐ×¢½âÔòÓ¦ÓÃ
+				xs.processAnnotations(clazz); //å¦‚æžœæœ‰æ³¨è§£åˆ™åº”ç”¨
 				if (null != aliasField && aliasField.size() > 0) {
 					for (Iterator<String> it = aliasField.keySet().iterator(); it.hasNext();) {
 						String key = it.next().toString();
@@ -116,23 +116,23 @@ public class DataConvert {
 			throw new DataConvertException(ex);
 		}
 		catch (CannotResolveClassException ex) {
-			throw new BaseSTDException("XMLÎÄ¼þµÄÀàÐÍ½ÚµãÃûÓëÄ¿±ê¶ÔÏóµÄÀàÐÍÃû²»Ò»ÖÂ", ex);
+			throw new BaseSTDException("XMLæ–‡ä»¶çš„ç±»åž‹èŠ‚ç‚¹åä¸Žç›®æ ‡å¯¹è±¡çš„ç±»åž‹åä¸ä¸€è‡´", ex);
 		}
 		catch (ClassCastException ex) {
-			throw new BaseSTDException("DataConvert.parseObjectFromXMLÖÐÀàÐÍÇ¿ÖÆ×ª»»´íÎó£¡", ex);
+			throw new BaseSTDException("DataConvert.parseObjectFromXMLä¸­ç±»åž‹å¼ºåˆ¶è½¬æ¢é”™è¯¯ï¼", ex);
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚXML¸ñÊ½Êý¾Ý×ª»»³ÉStudentPOÊµÌåÊ±´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨XMLæ ¼å¼æ•°æ®è½¬æ¢æˆStudentPOå®žä½“æ—¶é”™è¯¯ï¼", ex);
 		}
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º¶ÔÏóÐòÁÐ»¯ÎªJSON×Ö·û´®
-	 * ´´½¨ÈÕÆÚ  : 2013-6-18
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå¯¹è±¡åºåˆ—åŒ–ä¸ºJSONå­—ç¬¦ä¸²
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-18
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param obj
 	 * @return
@@ -146,22 +146,22 @@ public class DataConvert {
 			return retStr;
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚ¶ÔÏóÐòÁÐ»¯ÎªJSON×Ö·û´®Ê±·¢Éú´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨å¯¹è±¡åºåˆ—åŒ–ä¸ºJSONå­—ç¬¦ä¸²æ—¶å‘ç”Ÿé”™è¯¯ï¼", ex);
 		}
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º¶ÔÏóÐòÁÐ»¯ÎªXML×Ö·û´®
-	 * ´´½¨ÈÕÆÚ  : 2013-6-19
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå¯¹è±¡åºåˆ—åŒ–ä¸ºXMLå­—ç¬¦ä¸²
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-19
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
 	 * @param obj
-	 * @param alias ÀàÐÍ±ðÃû¼¯ºÏ£¬Ö÷ÒªÊµÏÖxml½ÚµãÃûÓë¾ßÌå¶ÔÏóÀàÐÍµÄ¶ÔÓ¦¡£
-	 *              ·ñÔò½âÎöÆ÷²»ÖªµÀxml½Úµã¸Ã×ª»»³ÉÊ²Ã´ÀàÐÍ¡£
+	 * @param alias ç±»åž‹åˆ«åé›†åˆï¼Œä¸»è¦å®žçŽ°xmlèŠ‚ç‚¹åä¸Žå…·ä½“å¯¹è±¡ç±»åž‹çš„å¯¹åº”ã€‚
+	 *              å¦åˆ™è§£æžå™¨ä¸çŸ¥é“xmlèŠ‚ç‚¹è¯¥è½¬æ¢æˆä»€ä¹ˆç±»åž‹ã€‚
 	 * @return
 	 *
 	 */
@@ -182,17 +182,17 @@ public class DataConvert {
 			return retStr;
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚ¶ÔÏóÐòÁÐ»¯ÎªXML×Ö·û´®Ê±·¢Éú´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨å¯¹è±¡åºåˆ—åŒ–ä¸ºXMLå­—ç¬¦ä¸²æ—¶å‘ç”Ÿé”™è¯¯ï¼", ex);
 		}
 	}
 	
 	/**
 	 * 
-	 * Ãè          Êö £º¶ÔÏóÐòÁÐ»¯ÎªXML×Ö·û´®
-	 * ´´½¨ÈÕÆÚ  : 2013-6-19
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå¯¹è±¡åºåˆ—åŒ–ä¸ºXMLå­—ç¬¦ä¸²
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-19
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
 	 * @return
@@ -209,21 +209,21 @@ public class DataConvert {
 			return retStr;
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚ¶ÔÏóÐòÁÐ»¯ÎªXML×Ö·û´®Ê±·¢Éú´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨å¯¹è±¡åºåˆ—åŒ–ä¸ºXMLå­—ç¬¦ä¸²æ—¶å‘ç”Ÿé”™è¯¯ï¼", ex);
 		}
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º½«JSON¸ñÊ½µÄ×Ö·ûÁ÷×ª»»³ÉÄ¿±êÀàÐÍµÄ¼¯ºÏ¶ÔÏó
-	 * ´´½¨ÈÕÆÚ  : 2013-6-18
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå°†JSONæ ¼å¼çš„å­—ç¬¦æµè½¬æ¢æˆç›®æ ‡ç±»åž‹çš„é›†åˆå¯¹è±¡
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-18
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
-	 * @param objStr jsonÊý¾ÝÁ÷
-	 * @param clazz ¼¯ºÏÖÐÔªËØÀàÐÍ
+	 * @param objStr jsonæ•°æ®æµ
+	 * @param clazz é›†åˆä¸­å…ƒç´ ç±»åž‹
 	 * @return
 	 *
 	 */
@@ -239,23 +239,23 @@ public class DataConvert {
 			throw new DataConvertException(ex);
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚJSON¸ñÊ½Êý¾Ý×ª»»³ÉÊµÌå¼¯Ê±´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨JSONæ ¼å¼æ•°æ®è½¬æ¢æˆå®žä½“é›†æ—¶é”™è¯¯ï¼", ex);
 		}
 	}
 
 	/**
 	 * 
-	 * Ãè          Êö £º½«XML¸ñÊ½µÄ×Ö·ûÁ÷×ª»»³ÉÄ¿±êÀàÐÍµÄ¼¯ºÏ¶ÔÏó
-	 * ´´½¨ÈÕÆÚ  : 2013-6-19
-	 * ×÷           Õß £º lx
-	 * ÐÞ¸ÄÈÕÆÚ  : (ÎÄ¼þµÄÐÞ¸ÄÈÕÆÚ)
-	 * ÐÞ   ¸Ä   Õß £º(ÎÄ¼þµÄÐÞ¸ÄÕß£¬ÎÄ¼þ´´½¨ÕßÖ®ÍâµÄÈË)
+	 * æ          è¿° ï¼šå°†XMLæ ¼å¼çš„å­—ç¬¦æµè½¬æ¢æˆç›®æ ‡ç±»åž‹çš„é›†åˆå¯¹è±¡
+	 * åˆ›å»ºæ—¥æœŸ  : 2013-6-19
+	 * ä½œ           è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ  : (æ–‡ä»¶çš„ä¿®æ”¹æ—¥æœŸ)
+	 * ä¿®   æ”¹   è€… ï¼š(æ–‡ä»¶çš„ä¿®æ”¹è€…ï¼Œæ–‡ä»¶åˆ›å»ºè€…ä¹‹å¤–çš„äºº)
 	 * @version   : 1.0
 	 * @param <T>
-	 * @param objStrs xmlÊý¾ÝÁ÷
-	 * @param clazz ¼¯ºÏÖÐÔªËØÀàÐÍ
-	 * @param alias ÀàÐÍ±ðÃû¼¯ºÏ£¬Ö÷ÒªÊµÏÖxml½ÚµãÃûÓë¾ßÌå¶ÔÏóÀàÐÍµÄ¶ÔÓ¦¡£
-	 *              ·ñÔò½âÎöÆ÷²»ÖªµÀxml½Úµã¸Ã×ª»»³ÉÊ²Ã´ÀàÐÍ¡£
+	 * @param objStrs xmlæ•°æ®æµ
+	 * @param clazz é›†åˆä¸­å…ƒç´ ç±»åž‹
+	 * @param alias ç±»åž‹åˆ«åé›†åˆï¼Œä¸»è¦å®žçŽ°xmlèŠ‚ç‚¹åä¸Žå…·ä½“å¯¹è±¡ç±»åž‹çš„å¯¹åº”ã€‚
+	 *              å¦åˆ™è§£æžå™¨ä¸çŸ¥é“xmlèŠ‚ç‚¹è¯¥è½¬æ¢æˆä»€ä¹ˆç±»åž‹ã€‚
 	 * @return
 	 *
 	 */
@@ -282,13 +282,13 @@ public class DataConvert {
 			throw new DataConvertException(ex);
 		}
 		catch (CannotResolveClassException ex) {
-			throw new BaseSTDException("XMLÎÄ¼þµÄÀàÐÍ½ÚµãÃûÓëÄ¿±ê¶ÔÏóµÄÀàÐÍÃû²»Ò»ÖÂ", ex);
+			throw new BaseSTDException("XMLæ–‡ä»¶çš„ç±»åž‹èŠ‚ç‚¹åä¸Žç›®æ ‡å¯¹è±¡çš„ç±»åž‹åä¸ä¸€è‡´", ex);
 		}
 		catch (ClassCastException ex) {
-			throw new BaseSTDException("DataConvert.parseObjectFromXMLÖÐÀàÐÍÇ¿ÖÆ×ª»»´íÎó£¡", ex);
+			throw new BaseSTDException("DataConvert.parseObjectFromXMLä¸­ç±»åž‹å¼ºåˆ¶è½¬æ¢é”™è¯¯ï¼", ex);
 		}
 		catch (Exception ex) {
-			throw new BaseSTDException("ÔÚXML¸ñÊ½Êý¾Ý×ª»»³ÉÊµÌåÊ±´íÎó£¡", ex);
+			throw new BaseSTDException("åœ¨XMLæ ¼å¼æ•°æ®è½¬æ¢æˆå®žä½“æ—¶é”™è¯¯ï¼", ex);
 		}
 	}
 }

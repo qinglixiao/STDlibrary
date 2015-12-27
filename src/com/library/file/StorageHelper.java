@@ -10,9 +10,9 @@ import android.content.Context;
 import android.os.Environment;
 
 public class StorageHelper implements IStorageOperator {
-	// ÎÄ¼ş²Ù×÷¾ßÌåÀà
+	// æ–‡ä»¶æ“ä½œå…·ä½“ç±»
 	private IStorageOperator mOperator;
-	// ÈÕÖ¾¼ÇÂ¼Æ÷
+	// æ—¥å¿—è®°å½•å™¨
 	private static Logger mloger = null;
 
 	private StorageHelper() {
@@ -20,20 +20,20 @@ public class StorageHelper implements IStorageOperator {
 	}
 
 	/**
-	 * Ãè Êö £º´´½¨ÎÄ¼ş²Ù×÷ÊµÌåÀà
-	 * ´´ ½¨ ÈÕ ÆÚ : 2013-6-24
-	 * ×÷ Õß £º lx
-	 * ĞŞ ¸Ä ÈÕ ÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šåˆ›å»ºæ–‡ä»¶æ“ä½œå®ä½“ç±»
+	 * åˆ› å»º æ—¥ æœŸ : 2013-6-24
+	 * ä½œ è€… ï¼š lx
+	 * ä¿® æ”¹ æ—¥ æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * @version : 1.0
 	 */
 	public static StorageHelper createInstance(Context context) {
 		StorageHelper helper = new StorageHelper();
-		//ÓĞSD¿¨ÔòÓÅÏÈ´æ´¢µ½¿¨Àï
+		//æœ‰SDå¡åˆ™ä¼˜å…ˆå­˜å‚¨åˆ°å¡é‡Œ
 		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()))
 			helper.mOperator = new SDCardHelper(context);
 		else
-			//ÎŞ¿¨ÔòÖ±½Ó´æÈëÄÚ´æ
+			//æ— å¡åˆ™ç›´æ¥å­˜å…¥å†…å­˜
 			helper.mOperator = new MemoryStorage(context);
 		if (mloger == null)
 			mloger = LoggerFactory.getLogger(StorageHelper.class);
@@ -63,7 +63,7 @@ public class StorageHelper implements IStorageOperator {
 	public boolean close() {
 		// TODO Auto-generated method stub
 		if (mOperator == null) {
-			mloger.info("ÎÄ¼ş²Ù×÷ÀàÎª¿Õ");
+			mloger.info("æ–‡ä»¶æ“ä½œç±»ä¸ºç©º");
 			return false;
 		}
 		return mOperator.close();
@@ -73,7 +73,7 @@ public class StorageHelper implements IStorageOperator {
 	public long getAvailableSize() {
 		// TODO Auto-generated method stub
 		if (mOperator == null) {
-			mloger.info("ÎÄ¼ş²Ù×÷ÀàÎª¿Õ");
+			mloger.info("æ–‡ä»¶æ“ä½œç±»ä¸ºç©º");
 			return -1;
 		}
 		return mOperator.getAvailableSize();

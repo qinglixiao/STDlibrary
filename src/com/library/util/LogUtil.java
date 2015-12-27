@@ -18,12 +18,12 @@ import ch.qos.logback.core.spi.FilterReply;
 public class LogUtil {
 	/**
 	 * 
-	 * Ãè Êö £ºÅäÖÃÈÕÖ¾ÎÄ¼ş,½«Éú³ÉÈı¸ö¼¶±ğÎÄ¼ş£¨´íÎó£¬µ÷ÊÔ£¬ĞÅÏ¢£©
-	 * Ã¿¸öÎÄ¼ş×î¶à±£´æÆßÌìÀúÊ·¼ÇÂ¼
-	 * ´´½¨ÈÕÆÚ : 2013-11-19
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šé…ç½®æ—¥å¿—æ–‡ä»¶,å°†ç”Ÿæˆä¸‰ä¸ªçº§åˆ«æ–‡ä»¶ï¼ˆé”™è¯¯ï¼Œè°ƒè¯•ï¼Œä¿¡æ¯ï¼‰
+	 * æ¯ä¸ªæ–‡ä»¶æœ€å¤šä¿å­˜ä¸ƒå¤©å†å²è®°å½•
+	 * åˆ›å»ºæ—¥æœŸ : 2013-11-19
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * 
@@ -34,7 +34,7 @@ public class LogUtil {
 		LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
 		// lc.reset();
 
-		// Ìí¼ÓDEBUG¼¶±ğÎÄ¼ş
+		// æ·»åŠ DEBUGçº§åˆ«æ–‡ä»¶
 		PatternLayoutEncoder encoder_debug = new PatternLayoutEncoder();
 		encoder_debug.setContext(lc);
 		encoder_debug.setPattern("%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n");
@@ -53,19 +53,19 @@ public class LogUtil {
 		fileAppender_debug.setEncoder(encoder_debug);
 		fileAppender_debug.addFilter(filter_debug);
 
-		// Ìí¼ÓÊ±¼äÏŞÖÆ¹æÔò
+		// æ·»åŠ æ—¶é—´é™åˆ¶è§„åˆ™
 		TimeBasedRollingPolicy<ILoggingEvent> rollingPolicy_debug = new TimeBasedRollingPolicy<ILoggingEvent>();
 		rollingPolicy_debug.setFileNamePattern(path + "/debug_%d.log");
-		rollingPolicy_debug.setMaxHistory(7); // ±£´æÆßÌìÈÕÖ¾¼ÇÂ¼
+		rollingPolicy_debug.setMaxHistory(7); // ä¿å­˜ä¸ƒå¤©æ—¥å¿—è®°å½•
 		rollingPolicy_debug.setParent(fileAppender_debug);  // parent and context required!
 		rollingPolicy_debug.setContext(lc);
 		rollingPolicy_debug.start();
 
 		fileAppender_debug.setRollingPolicy(rollingPolicy_debug);
 		fileAppender_debug.start();
-		// /////////////////////////////½áÊø
+		// /////////////////////////////ç»“æŸ
 
-		// Ìí¼ÓINFO¼¶±ğÎÄ¼ş
+		// æ·»åŠ INFOçº§åˆ«æ–‡ä»¶
 		PatternLayoutEncoder encoder_info = new PatternLayoutEncoder();
 		encoder_info.setContext(lc);
 		encoder_info.setPattern("%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n");
@@ -84,19 +84,19 @@ public class LogUtil {
 		fileAppender_info.setEncoder(encoder_info);
 		fileAppender_info.addFilter(filter_info);
 
-		// Ìí¼ÓÊ±¼äÏŞÖÆ¹æÔò
+		// æ·»åŠ æ—¶é—´é™åˆ¶è§„åˆ™
 		TimeBasedRollingPolicy<ILoggingEvent> rollingPolicy_info = new TimeBasedRollingPolicy<ILoggingEvent>();
 		rollingPolicy_info.setFileNamePattern(path + "/info_%d.log");
-		rollingPolicy_info.setMaxHistory(7); // ±£´æÆßÌìÈÕÖ¾¼ÇÂ¼
+		rollingPolicy_info.setMaxHistory(7); // ä¿å­˜ä¸ƒå¤©æ—¥å¿—è®°å½•
 		rollingPolicy_info.setParent(fileAppender_info);  // parent and context required!
 		rollingPolicy_info.setContext(lc);
 		rollingPolicy_info.start();
 
 		fileAppender_info.setRollingPolicy(rollingPolicy_info);
 		fileAppender_info.start();
-		// /////////////////////////////½áÊø
+		// /////////////////////////////ç»“æŸ
 
-		// Ìí¼ÓERROR¼¶±ğÎÄ¼ş
+		// æ·»åŠ ERRORçº§åˆ«æ–‡ä»¶
 		PatternLayoutEncoder encoder_error = new PatternLayoutEncoder();
 		encoder_error.setContext(lc);
 		encoder_error.setPattern("%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n");
@@ -115,19 +115,19 @@ public class LogUtil {
 		fileAppender_error.setEncoder(encoder_error);
 		fileAppender_error.addFilter(filter_error);
 
-		// Ìí¼ÓÊ±¼äÏŞÖÆ¹æÔò
+		// æ·»åŠ æ—¶é—´é™åˆ¶è§„åˆ™
 		TimeBasedRollingPolicy<ILoggingEvent> rollingPolicy_error = new TimeBasedRollingPolicy<ILoggingEvent>();
 		rollingPolicy_error.setFileNamePattern(path + "/error_%d.log");
-		rollingPolicy_error.setMaxHistory(7); // ±£´æÆßÌìÈÕÖ¾¼ÇÂ¼
+		rollingPolicy_error.setMaxHistory(7); // ä¿å­˜ä¸ƒå¤©æ—¥å¿—è®°å½•
 		rollingPolicy_error.setParent(fileAppender_error);  // parent and context required!
 		rollingPolicy_error.setContext(lc);
 		rollingPolicy_error.start();
 
 		fileAppender_error.setRollingPolicy(rollingPolicy_error);
 		fileAppender_error.start();
-		// ////////////////////////////////////////½áÊø
+		// ////////////////////////////////////////ç»“æŸ
 
-		// Ìí¼Ó LogcatÊä³ö
+		// æ·»åŠ  Logcatè¾“å‡º
 		PatternLayoutEncoder encoder_logcat = new PatternLayoutEncoder();
 		encoder_logcat.setContext(lc);
 		encoder_logcat.setPattern("[%thread] %msg%n");
@@ -137,12 +137,12 @@ public class LogUtil {
 		logcatAppender.setContext(lc);
 		logcatAppender.setEncoder(encoder_logcat);
 		logcatAppender.start();
-		// /////////////////////////½áÊø
+		// /////////////////////////ç»“æŸ
 
 		// add the newly created appenders to the root logger;
 		// qualify Logger to disambiguate from org.slf4j.Logger
 		ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-		// root.setLevel(Level.INFO); //ÉèÖÃÊä³ö¼¶±ğ
+		// root.setLevel(Level.INFO); //è®¾ç½®è¾“å‡ºçº§åˆ«
 		root.addAppender(fileAppender_error);
 		root.addAppender(fileAppender_info);
 		root.addAppender(fileAppender_debug);
@@ -151,11 +151,11 @@ public class LogUtil {
 
 	/**
 	 * 
-	 * Ãè Êö £ºÅäÖÃµ¥Ò»ÈÕÖ¾ÎÄ¼ş
-	 * ´´½¨ÈÕÆÚ : 2014-1-5
-	 * ×÷ Õß £º lx
-	 * ĞŞ¸ÄÈÕÆÚ :
-	 * ĞŞ ¸Ä Õß £º
+	 * æ è¿° ï¼šé…ç½®å•ä¸€æ—¥å¿—æ–‡ä»¶
+	 * åˆ›å»ºæ—¥æœŸ : 2014-1-5
+	 * ä½œ è€… ï¼š lx
+	 * ä¿®æ”¹æ—¥æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * 
 	 * @version : 1.0
 	 * @param path
@@ -192,9 +192,9 @@ public class LogUtil {
 
 		fileAppender.setRollingPolicy(wRollingPolicy);
 		fileAppender.start();
-		// /////////////////////////////½áÊø
+		// /////////////////////////////ç»“æŸ
 
-		// Ìí¼Ó LogcatÊä³ö
+		// æ·»åŠ  Logcatè¾“å‡º
 		PatternLayoutEncoder encoder_logcat = new PatternLayoutEncoder();
 		encoder_logcat.setContext(lc);
 		encoder_logcat.setPattern("[%msg%n");
@@ -204,7 +204,7 @@ public class LogUtil {
 		logcatAppender.setContext(lc);
 		logcatAppender.setEncoder(encoder_logcat);
 		logcatAppender.start();
-		// /////////////////////////½áÊø
+		// /////////////////////////ç»“æŸ
 
 		ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 		root.addAppender(fileAppender);

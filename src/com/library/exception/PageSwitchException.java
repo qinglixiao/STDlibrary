@@ -1,31 +1,31 @@
 package com.library.exception;
 
 /**
- * Ãè Êö £ºÒ³ÃæÌø×ªÒì³£Àà
- * ´´ ½¨ ÈÕ ÆÚ : 2013-6-21
- * ×÷ Õß £º lx
- * ÐÞ ¸Ä ÈÕ ÆÚ :
- * ÐÞ ¸Ä Õß £º
+ * æ è¿° ï¼šé¡µé¢è·³è½¬å¼‚å¸¸ç±»
+ * åˆ› å»º æ—¥ æœŸ : 2013-6-21
+ * ä½œ è€… ï¼š lx
+ * ä¿® æ”¹ æ—¥ æœŸ :
+ * ä¿® æ”¹ è€… ï¼š
  * @version : 1.0
  */
 public class PageSwitchException extends BaseSTDException {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ³õÊ¼»¯¿é£¬³õÊ¼»¯×Ô¶¨ÒåÒì³£»ù±¾ÐÅÏ¢
+	 * åˆå§‹åŒ–å—ï¼Œåˆå§‹åŒ–è‡ªå®šä¹‰å¼‚å¸¸åŸºæœ¬ä¿¡æ¯
 	 */
 	{
 		this.mID = "4";
-		this.mMessage = "Ò³ÃæÌø×ªÒì³££¡";
-		this.mDescription = "Ò³ÃæÌø×ª¹ý³ÌÖÐ³öÏÖÒì³££¬Òì³£µ¼ÖÂÔ­Òò¿ÉÄÜÊÇÓÃ»§´«µÝ²ÎÊý²»ÕýÈ·,»òÕßÒýÓÃÁË²»´æÔÚµÄ×ÊÔ´ÎÄ¼þ";
+		this.mMessage = "é¡µé¢è·³è½¬å¼‚å¸¸ï¼";
+		this.mDescription = "é¡µé¢è·³è½¬è¿‡ç¨‹ä¸­å‡ºçŽ°å¼‚å¸¸ï¼Œå¼‚å¸¸å¯¼è‡´åŽŸå› å¯èƒ½æ˜¯ç”¨æˆ·ä¼ é€’å‚æ•°ä¸æ­£ç¡®,æˆ–è€…å¼•ç”¨äº†ä¸å­˜åœ¨çš„èµ„æºæ–‡ä»¶";
 	}
 
 	/**
-	 * Ãè Êö £ºÎÞ²Î¹¹Ôì
-	 * ´´ ½¨ ÈÕ ÆÚ : 2013-6-21
-	 * ×÷ Õß £º lx
-	 * ÐÞ ¸Ä ÈÕ ÆÚ :
-	 * ÐÞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæ— å‚æž„é€ 
+	 * åˆ› å»º æ—¥ æœŸ : 2013-6-21
+	 * ä½œ è€… ï¼š lx
+	 * ä¿® æ”¹ æ—¥ æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * @version : 1.0
 	 */
 	public PageSwitchException() {
@@ -33,40 +33,40 @@ public class PageSwitchException extends BaseSTDException {
 	}
 
 	/**
-	 * Ãè Êö £ºÓÐ²Î¹¹Ôì
-	 * ´´ ½¨ ÈÕ ÆÚ : 2013-6-21
-	 * ×÷ Õß £º lx
-	 * ÐÞ ¸Ä ÈÕ ÆÚ :
-	 * ÐÞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæœ‰å‚æž„é€ 
+	 * åˆ› å»º æ—¥ æœŸ : 2013-6-21
+	 * ä½œ è€… ï¼š lx
+	 * ä¿® æ”¹ æ—¥ æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * @version : 1.0
-	 * @param msg ÓÃ»§ÌáÊ¾ÓÑºÃÐÅÏ¢
+	 * @param msg ç”¨æˆ·æç¤ºå‹å¥½ä¿¡æ¯
 	 */
 	public PageSwitchException(String msg) {
 		super(msg);
 	}
 
 	/**
-	 * Ãè Êö £ºÓÐ²Î¹¹Ôì
-	 * ´´ ½¨ ÈÕ ÆÚ : 2013-6-21
-	 * ×÷ Õß £º lx
-	 * ÐÞ ¸Ä ÈÕ ÆÚ :
-	 * ÐÞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæœ‰å‚æž„é€ 
+	 * åˆ› å»º æ—¥ æœŸ : 2013-6-21
+	 * ä½œ è€… ï¼š lx
+	 * ä¿® æ”¹ æ—¥ æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * @version : 1.0
-	 * @param ex ÏµÍ³Òì³£Å×³ö¶ÔÏó
+	 * @param ex ç³»ç»Ÿå¼‚å¸¸æŠ›å‡ºå¯¹è±¡
 	 */
 	public PageSwitchException(Throwable ex) {
 		super(ex);
 	}
 
 	/**
-	 * Ãè Êö £ºÓÐ²Î¹¹Ôì
-	 * ´´ ½¨ ÈÕ ÆÚ : 2013-6-21
-	 * ×÷ Õß £º lx
-	 * ÐÞ ¸Ä ÈÕ ÆÚ :
-	 * ÐÞ ¸Ä Õß £º
+	 * æ è¿° ï¼šæœ‰å‚æž„é€ 
+	 * åˆ› å»º æ—¥ æœŸ : 2013-6-21
+	 * ä½œ è€… ï¼š lx
+	 * ä¿® æ”¹ æ—¥ æœŸ :
+	 * ä¿® æ”¹ è€… ï¼š
 	 * @version : 1.0
-	 * @param msg ÓÃ»§ÌáÊ¾ÓÑºÃÐÅÏ¢
-	 * @param ex ÏµÍ³Òì³£Å×³ö¶ÔÏó
+	 * @param msg ç”¨æˆ·æç¤ºå‹å¥½ä¿¡æ¯
+	 * @param ex ç³»ç»Ÿå¼‚å¸¸æŠ›å‡ºå¯¹è±¡
 	 */
 	public PageSwitchException(String msg, Throwable ex) {
 		super(msg, ex);

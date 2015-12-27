@@ -15,7 +15,7 @@ public class DownLoadHelper {
 	private Context contextApp;
 	private static DownLoadHelper instance;
 	private DownloadManager mDownloadManager;
-	public String saveDir;//文件保存目录
+	public String saveDir;//鏂囦欢淇濆瓨鐩綍
 	private Handler handler;
 	private long downloadId;
 

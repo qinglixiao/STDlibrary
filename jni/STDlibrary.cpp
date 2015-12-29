@@ -7,13 +7,13 @@
 #define d(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define i(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 
-// C/C++¶¨ÒåµÄ·½·¨±ØÐëÎªJava+°üÃû+activityÃû+ÄãµÄº¯ÊýÃû£¬Ã¿¸ö²¿·ÖÖ®¼äÒªÓÃÏÂ»®Ïß_À´Á¬½Ó£¬
-// ¶øÇÒ²ÎÊýÒ²ÊÇ¹Ì¶¨µÄ¡£ËùÒÔ¶¨ÒåC/C++º¯ÊýµÄ¹Ì¶¨¸ñÊ½Îª:
+// C/C++å®šä¹‰çš„æ–¹æ³•å¿…é¡»ä¸ºJava+åŒ…å+activityå+ä½ çš„å‡½æ•°åï¼Œæ¯ä¸ªéƒ¨åˆ†ä¹‹é—´è¦ç”¨ä¸‹åˆ’çº¿_æ¥è¿žæŽ¥ï¼Œ
+// è€Œä¸”å‚æ•°ä¹Ÿæ˜¯å›ºå®šçš„ã€‚æ‰€ä»¥å®šä¹‰C/C++å‡½æ•°çš„å›ºå®šæ ¼å¼ä¸º:
 // Java_PackageName_ActivityName_function(JNIEnv* env, jobject obj) {...}
 //
-// ÕâÀïextern "C"ÊÇÎªÁË·ÀÖ¹C++±àÒë¶þ½øÖÆÁ´½Ó¿âÊ±¶Ôº¯Êý½øÐÐ¸ÄÃû£¬ÆäÊµ¼Ó²»¼Ó¶¼²»Ó°ÏìÕâ¶ÎÊµÏÖ´úÂëµÄÔËÐÐÐ§¹û£¬
-// µ«ÊÇÈç¹ûÄãµÄ³ÌÐòÒòÎªjava.lang.UnsatisfiedLinkError: Native method not foundÕâ
-// ´íÎó¶ø±ÀÀ£µÄ»°Äã»¹ÊÇ¼ÓÉÏ°É¡£
+// è¿™é‡Œextern "C"æ˜¯ä¸ºäº†é˜²æ­¢C++ç¼–è¯‘äºŒè¿›åˆ¶é“¾æŽ¥åº“æ—¶å¯¹å‡½æ•°è¿›è¡Œæ”¹åï¼Œå…¶å®žåŠ ä¸åŠ éƒ½ä¸å½±å“è¿™æ®µå®žçŽ°ä»£ç çš„è¿è¡Œæ•ˆæžœï¼Œ
+// ä½†æ˜¯å¦‚æžœä½ çš„ç¨‹åºå› ä¸ºjava.lang.UnsatisfiedLinkError: Native method not foundè¿™
+// é”™è¯¯è€Œå´©æºƒçš„è¯ä½ è¿˜æ˜¯åŠ ä¸Šå§ã€‚
 
 extern "C" jint Java_com_example_ndktest_MainActivity_hello(JNIEnv * env,
 		jobject thiz, jint a) {
@@ -215,14 +215,14 @@ extern "C" jstring Java_com_example_ndktest_MainActivity_getPublicKey(
 }
 
 jstring getInnerApkKey(JNIEnv *env) {
-	//drugkeyÇ©Ãû¶ÔÓ¦µÄpublicKey
+	//drugkeyç­¾åå¯¹åº”çš„publicKey
 	const char * apkKey =
 			"OpenSSLRSAPublicKey{modulus=b63d9bbdfbbd91af4a8e492886f901c1f0335138b0a0d9f0841ee8491588846cbbebbc8b1f60d4cc5a1fd221a5601ba026741139641ec0ae66cb05ab6537a23032333c4c02ce63076edc2d00bbfe7fdbf1f14152b408f3931f4b4a72fd61a06d205a3dcfb8b4886959eb432ffe2154bdeacd23d1b586a5b705f007608a59e6544af165a231275c15c227b8ce28b507023e4400186641d36a7e94655d71bffdd97433e595db0e11bd7f76d747419df99b4f1b1973bbc52e75ff538e690725353b41a0e07d0df8f876432925db46a0976f65c4284f39b34f16fdfb4a7fd91da9635a6742909939d4d519a9d80e6cff02c35515faab298835b31d0bf7b785e05355,publicExponent=10001}";
 	return env->NewStringUTF(apkKey);
 }
 
 jstring getPrivateKey(JNIEnv *env) {
-	//Ç©ÃûË½Ô¿
+	//ç­¾åç§é’¥
 	const char* privateKey =
 			"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALys+oYaxqv4FYju8C1poM6qmHLjWPnXzqEJT0NxyFXgdaK/Qe9DcpcASod9mIAdlLIxJEyYNlWeonAJVYW8pQ+pTVGwI9n0iaT71ldWQzcMN3Dvi/+zpgw3HxxO7HJtEIlR84pvILv1yceCZCqqQ4O/4SemsG00oTiTyD3SM2ZvAgMBAAECgYBLToeX6ywNC7Icu7Hljll+45yBjri+0CJLKFoYw1uA21xYnxoEE9my54zX04uA502oafDhGYfmWLDhIvidrpP6oaluURb/gbV5Bdcm98gGGVgm6lpK+G5N/eawXDjP0ZjxXb114Y/Hn/oVFVM9OqcujFSV+Wg4JgJ4Mmtdr35gYQJBAPbhx030xPcep8/dL5QQMc7ddoOrfxXewKcpDmZJi2ey381X+DhuphQ5gSVBbbunRiDCEcuXFY+R7xrgnP+viWcCQQDDpN8DfqRRl+cUhc0z/TbnSPJkMT/IQoFeFOE7wMBcDIBoQePEDsr56mtc/trIUh/L6evP9bkjLzWJs/kb/i25AkEAtoOf1k/4NUEiipdYjzuRtv8emKT2ZPKytmGx1YjVWKpyrdo1FXMnsJf6k9JVD3/QZnNSuJJPTD506AfZyWS6TQJANdeF2Hxd1GatnaRFGO2y0mvs6U30c7R5zd6JLdyaE7sNC6Q2fppjmeu9qFYq975CKegykYTacqhnX4I8KEwHYQJAby60iHMAYfSUpu//f5LMMRFK2sVif9aqlYbepJcAzJ6zbiSG5E+0xg/MjEj/Blg9rNsqDG4RECGJG2nPR72O8g==";
 	return env->NewStringUTF(privateKey);
@@ -271,7 +271,7 @@ jbyteArray getSign(JNIEnv *env, jclass thiz, jobject context) {
 	env->DeleteLocalRef(signature_array);
 }
 
-//ÑéÖ¤³ÌÐòÊÇ·ñ±»ÖØÐÂ´ò°ü;1£ºÎ´ÆÆ½â£¨Èç¹ûÇ©ÃûÒÑ¸Ä±äÔòÎª±»ÖØÐÂ´ò°ü£©
+//éªŒè¯ç¨‹åºæ˜¯å¦è¢«é‡æ–°æ‰“åŒ…;1ï¼šæœªç ´è§£ï¼ˆå¦‚æžœç­¾åå·²æ”¹å˜åˆ™ä¸ºè¢«é‡æ–°æ‰“åŒ…ï¼‰
 extern "C" jint Java_com_example_ndktest_MainActivity_isCopyOfRight(JNIEnv *env,
 		jclass thiz, jobject context) {
 	jstring apkKey_j = getInnerApkKey(env);
@@ -279,7 +279,7 @@ extern "C" jint Java_com_example_ndktest_MainActivity_isCopyOfRight(JNIEnv *env,
 	jstring publicKey = Java_com_example_ndktest_MainActivity_getPublicKey(
 			env, thiz, getSign(env, thiz, context));
 
-	return 1; //²âÊÔ
+	return 1; //æµ‹è¯•
 //	return !strcmp(env->GetStringUTFChars(apkKey_j, 0),
 //			env->GetStringUTFChars(publicKey, 0));
 }
@@ -288,7 +288,7 @@ extern "C" jstring Java_com_example_ndktest_MainActivity_getPrivateKey(
 		JNIEnv *env, jclass thiz, jobject context) {
 	if (Java_com_example_ndktest_MainActivity_isCopyOfRight(env, thiz,
 			context)) {
-		//Èç¹ûÎ´±»ÆÆ½âÔò·µ»ØË½Ô¿
+		//å¦‚æžœæœªè¢«ç ´è§£åˆ™è¿”å›žç§é’¥
 		return getPrivateKey(env);
 	}
 	else {
@@ -323,7 +323,7 @@ jstring byte2hex(JNIEnv*env, jbyteArray byteArray) {
 	delete[] byte;
 }
 
-//MD5¼ÓÃÜ
+//MD5åŠ å¯†
 extern "C" jstring Java_com_example_ndktest_MainActivity_MD5(JNIEnv *env,
 		jclass thiz, jstring paintext) {
 	jclass md5_class = env->FindClass("java/security/MessageDigest");

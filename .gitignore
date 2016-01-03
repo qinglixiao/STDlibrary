@@ -9,7 +9,3 @@ bin/
 *.bak
 captures/
 obj/
-ToonDaoGenerator/
-Toon/SystoonCore/obj/
-Toon/Toon.iml
-AndroidManifest.xml

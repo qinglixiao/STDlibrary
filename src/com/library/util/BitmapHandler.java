@@ -16,6 +16,8 @@ public class BitmapHandler {
         // First decode with inJustDecodeBounds=true to check dimensions
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(fileName,options);//只读取图片尺寸
+
         // Calculate inSampleSize
         options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
 

@@ -1,7 +1,11 @@
 package com.library.util;
 
+import android.os.Handler;
+import android.os.Looper;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,11 +14,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by gfy on 2016/3/26.
  */
 public class PoolThreadService {
-    private static PoolThreadService instance;
-    private ExecutorService executor ;
-    private AtomicInteger thread_index = new AtomicInteger();
+    private static Handler mMainHandler = new Handler(Looper.getMainLooper());
+    private static ExecutorService  executor;
 
-    private PoolThreadService(){
+    static {
+        final AtomicInteger thread_index = new AtomicInteger();
         executor = Executors.newCachedThreadPool(new ThreadFactory() {
             @Override
             public Thread newThread(Runnable r) {
@@ -23,23 +27,19 @@ public class PoolThreadService {
         });
     }
 
-    public static PoolThreadService getInstance(){
-        if(instance == null){
-            synchronized (PoolThreadService.class){
-                if(instance == null){
-                    instance = new PoolThreadService();
-                }
-            }
-        }
-        return instance;
-    }
-
-    public void execute(Runnable runnable){
+    public static void execute(Runnable runnable){
         executor.execute(runnable);
     }
 
-    //关闭线程池
-    public void shutdownAndAwaitTermination(){
+    public Future<?> submit(Runnable runnable){
+        return executor.submit(runnable);
+    }
+
+    public void post(Runnable runnable){
+        mMainHandler.post(runnable);
+    }
+
+    public static void destroy(){
         shutdownAndAwaitTermination(executor);
     }
 

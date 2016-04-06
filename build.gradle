@@ -1,12 +1,17 @@
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile fileTree(include: '*.jar', dir: 'libs')
 }
 
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
 
     sourceSets {
         main {

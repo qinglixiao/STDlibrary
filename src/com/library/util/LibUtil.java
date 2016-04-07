@@ -105,23 +105,6 @@ public class LibUtil {
 		return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
 	}
 
-	/**
-	 *
-	 * 描          述 ：通过给定的图片名获取对应的资源ID
-	 * 创建日期  : 2014-1-27
-	 * 作           者 ： lx
-	 * 修改日期  : ·
-	 * 修   改   者 ：
-	 * @version   : 1.0
-	 * @param context
-	 * @param drawableName
-	 * @return
-	 * 查找成功返回：id
-	 *失败返回：0
-	 */
-	public int getDrawableId(Context context, String drawableName) {
-		return context.getResources().getIdentifier(drawableName, "drawable", context.getPackageName());
-	}
 
 	/**
 	 *

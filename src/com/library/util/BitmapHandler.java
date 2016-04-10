@@ -10,7 +10,7 @@ import android.graphics.BitmapFactory;
  */
 public class BitmapHandler {
 
-    public static Bitmap decodeSampledBitmapFromFileName(String fileName,
+    public static Bitmap decodeBitmapFromFile(String fileName,
                                                          int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions
@@ -26,7 +26,7 @@ public class BitmapHandler {
         return BitmapFactory.decodeFile(fileName, options);
     }
 
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+    public static Bitmap decodeBitmapFromResource(Resources res, int resId,
                                                          int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions

@@ -1,5 +1,5 @@
 
-package com.library.core.db;
+package com.library.db;
 
 import java.util.List;
 

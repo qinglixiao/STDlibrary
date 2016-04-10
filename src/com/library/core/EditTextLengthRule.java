@@ -1,13 +1,15 @@
 
-package com.library.util;
+package com.library.core;
 
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextUtils;
 
+import com.library.util.StringUtil;
+
 /***
  * EditText 字数长度限制规则
- * */
+ */
 public class EditTextLengthRule implements InputFilter {
     private int maxLength;
 
@@ -19,7 +21,7 @@ public class EditTextLengthRule implements InputFilter {
 
     @Override
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart,
-            int dend) {
+                               int dend) {
         // TODO Auto-generated method stub
         cur_length = 0;
         if (dest != null) {
@@ -39,7 +41,7 @@ public class EditTextLengthRule implements InputFilter {
                 length = source.length();
                 // 逐个判断新录入的字符
                 for (int i = 0; i < length; i++) {
-                    if (isChinese(source.charAt(i))) {
+                    if (StringUtil.isChinese(source.charAt(i))) {
                         // 未超出限制则允许录入
                         if (cur_length + 2 <= maxLength) {
                             temp.append(source.charAt(i));
@@ -68,7 +70,7 @@ public class EditTextLengthRule implements InputFilter {
         int length = text.length();
         for (int i = 0; i < length; i++) {
             // 如果为汉字或中文字符则将长度加2
-            if (isChinese(text.charAt(i)))
+            if (StringUtil.isChinese(text.charAt(i)))
                 temp += 2;
             else
                 temp += 1;
@@ -76,27 +78,5 @@ public class EditTextLengthRule implements InputFilter {
         return temp;
     }
 
-    /**
-     * 字符是否是汉字
-     *
-     * @param a char
-     * @return boolean
-     */
-    /**
-     * 输入的字符是否是汉字
-     *
-     * @param a char
-     * @return boolean
-     */
-    public static boolean isChinese(char a) {
-        Character.UnicodeBlock ub = Character.UnicodeBlock.of(a);
-        return (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
-                || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS
-                || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
-                || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
-                || ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION
-                || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS
-                || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION);
-    }
 
 }

@@ -1,6 +1,6 @@
 package com.library.socket;
 
-import com.library.util.PoolThreadService;
+import com.library.util.ThreadPool;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -27,7 +27,7 @@ public class NetworkService implements Runnable {
                 pool.execute(new Handler(serverSocket.accept()));
             }
         } catch (IOException ex) {
-            PoolThreadService.shutdownAndAwaitTermination(pool);
+            ThreadPool.shutdownAndAwaitTermination(pool);
         }
     }
 

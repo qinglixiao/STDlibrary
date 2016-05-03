@@ -13,33 +13,37 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by gfy on 2016/3/26.
  */
-public class PoolThreadService {
+public class ThreadPool {
     private static Handler mMainHandler = new Handler(Looper.getMainLooper());
-    private static ExecutorService  executor;
+    private static ExecutorService executor;
 
     static {
         final AtomicInteger thread_index = new AtomicInteger();
         executor = Executors.newCachedThreadPool(new ThreadFactory() {
             @Override
             public Thread newThread(Runnable r) {
-                return new Thread(r,"my_thread:"+thread_index.getAndIncrement());
+                return new Thread(r, "my_thread:" + thread_index.getAndIncrement());
             }
         });
     }
 
-    public static void execute(Runnable runnable){
+    public static void execute(Runnable runnable) {
         executor.execute(runnable);
     }
 
-    public Future<?> submit(Runnable runnable){
+    public static Future<?> submit(Runnable runnable) {
         return executor.submit(runnable);
     }
 
-    public void post(Runnable runnable){
+    public static void postOnUiThread(Runnable runnable) {
         mMainHandler.post(runnable);
     }
 
-    public static void destroy(){
+    public static void postOnUiThreadDelayed(Runnable runnable, long delayMillis) {
+        mMainHandler.postDelayed(runnable, delayMillis);
+    }
+
+    public static void destroy() {
         shutdownAndAwaitTermination(executor);
     }
 

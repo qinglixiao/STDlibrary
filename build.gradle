@@ -2,8 +2,7 @@ apply plugin: 'com.android.library'
 
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
-    compile project(':volley')
-}
+   }
 
 android {
     compileSdkVersion 23

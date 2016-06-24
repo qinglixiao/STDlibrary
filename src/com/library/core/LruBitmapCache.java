@@ -5,9 +5,8 @@ import android.graphics.Bitmap;
 import android.util.DisplayMetrics;
 import android.util.LruCache;
 
-import com.android.volley.toolbox.ImageLoader.ImageCache;
 
-public class LruBitmapCache extends LruCache<String, Bitmap> implements ImageCache {
+public class LruBitmapCache extends LruCache<String, Bitmap>  {
     public LruBitmapCache(int maxSize) {
         super(maxSize);
     }
@@ -21,12 +20,10 @@ public class LruBitmapCache extends LruCache<String, Bitmap> implements ImageCac
         return value.getRowBytes() * value.getHeight();
     }
 
-    @Override
     public Bitmap getBitmap(String url) {
         return get(url);
     }
 
-    @Override
     public void putBitmap(String url, Bitmap bitmap) {
         put(url, bitmap);
     }

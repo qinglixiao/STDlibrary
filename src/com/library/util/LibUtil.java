@@ -14,6 +14,7 @@ import android.graphics.Rect;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Debug;
 import android.os.Environment;
 import android.telephony.TelephonyManager;
 import android.util.TypedValue;
@@ -499,6 +500,24 @@ public class LibUtil {
 			}
 		}
 		return "";
+	}
+
+	/**
+	 * 获取当前分配的内存堆大小
+	 * @return
+     */
+	public static long getHeapSize(){
+		Runtime runtime = Runtime.getRuntime();
+		long heapMemory = runtime.totalMemory() - runtime.freeMemory();
+		return heapMemory;
+	}
+
+	/**
+	 * 获取系统堆大小
+	 * @return
+     */
+	public static long getHeapNativeSize(){
+		return Debug.getNativeHeapSize();
 	}
 
 }

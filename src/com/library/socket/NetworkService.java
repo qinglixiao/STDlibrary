@@ -1,6 +1,6 @@
 package com.library.socket;
 
-import com.library.util.ThreadPool;
+import com.library.core.ThreadPool;
 
 import java.io.IOException;
 import java.net.ServerSocket;

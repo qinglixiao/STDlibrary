@@ -17,6 +17,7 @@ import android.net.NetworkInfo;
 import android.os.Debug;
 import android.os.Environment;
 import android.telephony.TelephonyManager;
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
@@ -281,7 +282,7 @@ public class LibUtil {
 	public static String getPhoneNumber(Context context) {
 		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 		String simSerialNum = telephonyManager.getLine1Number();
-		if (!simSerialNum.isEmpty())
+		if (!TextUtils.isEmpty(simSerialNum))
 			return simSerialNum.substring(simSerialNum.length() - 11);
 		return simSerialNum;
 	}

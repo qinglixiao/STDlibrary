@@ -11,13 +11,10 @@ import java.nio.channels.FileChannel;
  */
 public class FileUtil {
     /**
-     *
      * copy file
      *
-     * @param src
-     *            source file
-     * @param dest
-     *            target file
+     * @param src  source file
+     * @param dest target file
      * @throws IOException
      */
     public static void copyFile(File src, File dest) throws IOException {
@@ -41,54 +38,36 @@ public class FileUtil {
     }
 
     /**
-     * delete file
-     *
-     * @param file
-     *            file
-     * @return true if delete success
+     * 描          述 ：级联删除目录下的所有文件，如果为文件则直接删除
+     * @param file 目录/文件
+     * @param isContain 是否删除到传入的目录级别（true: 如传入 /sdcard/delivety/sp,则会将sp下的所有内容，及sp目录一并删除）
+     * @version : 1.0
      */
-    public static boolean deleteFile(File file) {
-        if (!file.exists()) {
-            return true;
-        }
-        if (file.isDirectory()) {
-            File[] files = file.listFiles();
-            for (File f : files) {
-                deleteFile(f);
-            }
-        }
-        return file.delete();
-    }
-
-    /**
-     *
-     * 描          述 ：级联删除文件/目录，如果为目录则删除该目录下所有内容包括此目录
-     * 创建日期  : 2014-7-31
-     * 作           者 ： lx
-     * 修改日期  :
-     * 修   改   者 ：
-     * @version   : 1.0
-     * @param path 目录/文件
-     *
-     */
-    public void delete(String path) {
-        File directory = new File(path);
-        if(directory.isFile()){
+    public static void delete(String file,boolean isContain) {
+        File directory = new File(file);
+        if (directory.isFile()) {
             directory.delete();
             return;
         }
         File[] children = directory.listFiles();
-        if (children.length == 0) {
+        for (int i = 0; i < children.length; i++) {
+            if (children[i].isDirectory()) {
+                delete(children[i].getPath(),isContain);
+            }
+            children[i].delete();
+        }
+        if(isContain){
             directory.delete();
         }
-        else {
-            for (int i = 0; i < children.length; i++) {
-                if (children[i].isFile())
-                    children[i].delete();
-                else if (children[i].isDirectory())
-                    delete(children[i].getPath());
-            }
-            directory.delete();
+    }
+
+    /**
+     * 描          述 ：级联删除目录下的所有文件，如果为文件则直接删除
+     * @version : 1.0
+     */
+    public static void delete(File file,boolean isContain) {
+        if (file != null) {
+            delete(file.getAbsolutePath(),isContain);
         }
     }
 

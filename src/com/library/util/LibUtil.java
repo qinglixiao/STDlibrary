@@ -35,10 +35,7 @@ public class LibUtil {
 	 *
 	 */
 	public static boolean isExternalStorageAvailable() {
-		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()))
-			return true;
-		else
-			return false;
+		return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
 	}
 
 	/**
@@ -53,7 +50,7 @@ public class LibUtil {
 	 * @return
 	 *
 	 */
-	public static String getAppHomeDirectory(Context context) {
+	public static String getAppDirectory(Context context) {
 		String mApplicationName = context.getPackageManager().getApplicationLabel(context.getApplicationInfo()).toString();
 		String dir = Environment.getExternalStoragePublicDirectory(mApplicationName).getPath();
 		File file = new File(dir);
@@ -106,25 +103,6 @@ public class LibUtil {
 	 */
 	public static String getDownLoadDirectory() {
 		return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-	}
-
-
-	/**
-	 *
-	 * 描          述 ：通过给定的布局文件名获取对应的资源ID
-	 * 创建日期  : 2014-1-27
-	 * 作           者 ： lx
-	 * 修改日期  : ·
-	 * 修   改   者 ：
-	 * @version   : 1.0
-	 * @param context
-	 * @param layoutName
-	 * @return
-	 * 查找成功返回：id
-	 *失败返回：0
-	 */
-	public int getLayoutId(Context context, String layoutName) {
-		return context.getResources().getIdentifier(layoutName, "layout", context.getPackageName());
 	}
 
 	/**

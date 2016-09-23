@@ -1,5 +1,7 @@
 package com.library.util;
 
+import android.text.TextUtils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -44,7 +46,13 @@ public class FileUtil {
      * @version : 1.0
      */
     public static void delete(String file,boolean isContain) {
+        if(TextUtils.isEmpty(file)){
+            return;
+        }
         File directory = new File(file);
+        if(!directory.exists()){
+            return;
+        }
         if (directory.isFile()) {
             directory.delete();
             return;

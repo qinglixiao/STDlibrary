@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory;
  * 图片操作工具类，用于图片压缩处理
  * Created by gfy on 2016/3/29.
  */
-public class BitmapHandler {
+public class BitmapUtil {
 
     public static Bitmap decodeBitmapFromFile(String fileName,
                                                          int reqWidth, int reqHeight) {

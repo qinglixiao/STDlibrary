@@ -3,6 +3,8 @@ package com.library.util;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.text.TextUtils;
+import android.util.Size;
 
 /**
  * 图片操作工具类，用于图片压缩处理
@@ -11,12 +13,12 @@ import android.graphics.BitmapFactory;
 public class BitmapUtil {
 
     public static Bitmap decodeBitmapFromFile(String fileName,
-                                                         int reqWidth, int reqHeight) {
+                                              int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(fileName,options);//只读取图片尺寸
+        BitmapFactory.decodeFile(fileName, options);//只读取图片尺寸
 
         // Calculate inSampleSize
         options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
@@ -27,7 +29,7 @@ public class BitmapUtil {
     }
 
     public static Bitmap decodeBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
+                                                  int reqWidth, int reqHeight) {
 
         // First decode with inJustDecodeBounds=true to check dimensions
         final BitmapFactory.Options options = new BitmapFactory.Options();
@@ -74,5 +76,18 @@ public class BitmapUtil {
             }
         }
         return inSampleSize;
+    }
+
+    public int[] getImageSize(String imagePath) {
+        int[] size = new int[2];
+        if (!TextUtils.isEmpty(imagePath)) {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            options.inSampleSize = 1;
+            BitmapFactory.decodeFile(imagePath, options);
+            size[0] = options.outWidth;
+            size[1] = options.outHeight;
+        }
+        return size;
     }
 }

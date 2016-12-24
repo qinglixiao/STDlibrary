@@ -241,10 +241,11 @@ public class SDCardHelper implements IStorageOperator {
 	@Override
 	public long getAvailableSize() {
 		// TODO Auto-generated method stub
-		StatFs fs = new StatFs(LibUtil.getSdCardRootDirectory());
-		int blockSize = fs.getBlockSize();
-		int avalableBlock = fs.getAvailableBlocks();
-		return new BigDecimal(blockSize).multiply(new BigDecimal(avalableBlock)).longValue();
+//		StatFs fs = new StatFs(LibUtil.getSdCardRootDirectory());
+//		int blockSize = fs.getBlockSize();
+//		int avalableBlock = fs.getAvailableBlocks();
+//		return new BigDecimal(blockSize).multiply(new BigDecimal(avalableBlock)).longValue();
+		return 0;
 	}
 
 	@Override

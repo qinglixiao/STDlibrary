@@ -16,6 +16,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Debug;
 import android.os.Environment;
+import android.os.StatFs;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.TypedValue;
@@ -35,69 +36,6 @@ public class LibUtil {
      */
     public static boolean isExternalStorageAvailable() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
-    }
-
-    /**
-     * 描          述 ：获取应用在SD卡的安装目录
-     * 创建日期  : 2013-11-25
-     * 作           者 ： lx
-     * 修改日期  :
-     * 修   改   者 ：
-     *
-     * @param context
-     * @return
-     * @version : 1.0
-     */
-    public static String getAppDirectory(Context context) {
-        String mApplicationName = context.getPackageManager().getApplicationLabel(context.getApplicationInfo()).toString();
-        String dir = Environment.getExternalStoragePublicDirectory(mApplicationName).getPath();
-        File file = new File(dir);
-        if (!file.exists())
-            file.mkdirs();
-        return dir;
-    }
-
-    /**
-     * 描          述 ：获取SD卡根目录
-     * 创建日期  : 2013-11-25
-     * 作           者 ： lx
-     * 修改日期  :
-     * 修   改   者 ：
-     *
-     * @return
-     * @version : 1.0
-     */
-    public static String getSdCardRootDirectory() {
-        return Environment.getExternalStorageDirectory().getAbsolutePath();
-    }
-
-    /**
-     * 描          述 ：获取应用缓存目录(内存)
-     * 创建日期  : 2014-7-30
-     * 作           者 ： lx
-     * 修改日期  :
-     * 修   改   者 ：
-     *
-     * @param context
-     * @return
-     * @version : 1.0
-     */
-    public static String getCacheDirectory(Context context) {
-        return context.getCacheDir().getPath();
-    }
-
-    /**
-     * 描          述 ：获取SD卡上的下载目录
-     * 创建日期  : 2013-11-26
-     * 作           者 ： lx
-     * 修改日期  :
-     * 修   改   者 ：
-     *
-     * @return
-     * @version : 1.0
-     */
-    public static String getDownLoadDirectory() {
-        return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
     }
 
     /**
@@ -430,12 +368,62 @@ public class LibUtil {
     }
 
     /**
-     * 获取系统堆大小
+     * 获取手机内存可用空间大小（不包括sd卡）
      *
      * @return
      */
-    public static long getHeapNativeSize() {
-        return Debug.getNativeHeapSize();
+    public static long getAvailableInternalMemorySize() {
+        File file = Environment.getDataDirectory();
+        StatFs statFs = new StatFs(file.getPath());
+        long blockSize = statFs.getBlockSizeLong();
+        long avaliableBlocks = statFs.getAvailableBlocksLong();
+        return blockSize * avaliableBlocks;
+    }
+
+    /**
+     * 获取手机内存总空间大小
+     *
+     * @return
+     */
+    public static long getTotalInternalMemorySize() {
+        File path = Environment.getDataDirectory();//Gets the Android data directory
+        StatFs stat = new StatFs(path.getPath());
+        long blockSize = stat.getBlockSizeLong();      //每个block 占字节数
+        long totalBlocks = stat.getBlockCountLong();   //block总数
+        return totalBlocks * blockSize;
+    }
+
+    /**
+     * 获取手机外部可用空间大小
+     *
+     * @return
+     */
+    public static long getAvailableExternalStorageSize() {
+        if (isExternalStorageAvailable()) {
+            File path = Environment.getExternalStorageDirectory();//获取SDCard根目录
+            StatFs stat = new StatFs(path.getPath());
+            long blockSize = stat.getBlockSizeLong();
+            long availableBlocks = stat.getAvailableBlocksLong();
+            return availableBlocks * blockSize;
+        } else {
+            return -1;
+        }
+    }
+
+    /**
+     * 获取手机外部总空间大小
+     * @return
+     */
+    public static long getTotalExternalStorageSize(){
+        if (isExternalStorageAvailable()) {
+            File path = Environment.getExternalStorageDirectory();//获取SDCard根目录
+            StatFs stat = new StatFs(path.getPath());
+            long blockSize = stat.getBlockSizeLong();
+            long availableBlocks = stat.getBlockCountLong();
+            return availableBlocks * blockSize;
+        } else {
+            return -1;
+        }
     }
 
 }

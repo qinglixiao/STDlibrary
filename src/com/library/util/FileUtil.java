@@ -41,16 +41,17 @@ public class FileUtil {
 
     /**
      * 描          述 ：级联删除目录下的所有文件，如果为文件则直接删除
-     * @param file 目录/文件
-     * @param isContain 是否删除到传入的目录级别（true: 如传入 /sdcard/delivety/sp,则会将sp下的所有内容，及sp目录一并删除）
+     *
+     * @param file     目录/文件
+     * @param isDelDir 是否删除到传入的目录级别（true: 如传入 /sdcard/delivety/sp,则会将sp下的所有内容，及sp目录一并删除）
      * @version : 1.0
      */
-    public static void delete(String file,boolean isContain) {
-        if(TextUtils.isEmpty(file)){
+    public static void delete(String file, boolean isDelDir) {
+        if (TextUtils.isEmpty(file)) {
             return;
         }
         File directory = new File(file);
-        if(!directory.exists()){
+        if (!directory.exists()) {
             return;
         }
         if (directory.isFile()) {
@@ -60,22 +61,41 @@ public class FileUtil {
         File[] children = directory.listFiles();
         for (int i = 0; i < children.length; i++) {
             if (children[i].isDirectory()) {
-                delete(children[i].getPath(),isContain);
+                delete(children[i].getPath(), isDelDir);
             }
             children[i].delete();
         }
-        if(isContain){
+        if (isDelDir) {
             directory.delete();
         }
     }
 
     /**
      * 描          述 ：级联删除目录下的所有文件，如果为文件则直接删除
+     *
      * @version : 1.0
      */
-    public static void delete(File file,boolean isContain) {
+    public static void delete(File file, boolean isDelDir) {
         if (file != null) {
-            delete(file.getAbsolutePath(),isContain);
+            delete(file.getAbsolutePath(), isDelDir);
+        }
+    }
+
+    public static File create(String filePath) {
+        File file = new File(filePath);
+        if (!file.exists()) {
+            try {
+                file.getParentFile().mkdirs();
+                if (file.createNewFile()) {
+                    return file;
+                } else {
+                    return null;
+                }
+            } catch (IOException e) {
+                return null;
+            }
+        } else {
+            return file;
         }
     }
 

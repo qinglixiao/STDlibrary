@@ -1,10 +1,10 @@
 
 package com.library.db;
 
-import java.util.List;
+import org.greenrobot.greendao.AbstractDao;
+import org.greenrobot.greendao.query.QueryBuilder;
 
-import de.greenrobot.dao.AbstractDao;
-import de.greenrobot.dao.query.QueryBuilder;
+import java.util.List;
 
 public class GreenDaoAccess<T, K> implements IDBAccess<T, K> {
     private AbstractDao<T, K> dao;
@@ -71,7 +71,7 @@ public class GreenDaoAccess<T, K> implements IDBAccess<T, K> {
     public void deleteByKeyInTx(K... keys) {
         dao.deleteByKeyInTx(keys);
     }
-    
+
     @Override
     public void deleteByKeyInTx(Iterable<K> keys){
         dao.deleteByKeyInTx(keys);
@@ -96,5 +96,5 @@ public class GreenDaoAccess<T, K> implements IDBAccess<T, K> {
     public void update(Iterable<T> entities) {
         dao.updateInTx(entities);
     }
-    
+
 }

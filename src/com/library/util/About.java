@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 
+import java.lang.reflect.Method;
+
 /**
  * 描          述 ：手机系统相关属性
  * 创建日期  : 2015-3-25
@@ -70,5 +72,25 @@ public class About {
             e.printStackTrace();
         }
         return provider;
+    }
+
+    public static boolean isXiaomiSys() {
+        return Build.MANUFACTURER.equalsIgnoreCase("xiaomi") || Build.BRAND.equalsIgnoreCase("xiaomi") || getSystemProperty("ro.miui.ui.version.name") != null;
+    }
+
+    public static boolean isMeizuSys() {
+        String flag = getSystemProperty("ro.build.display.id");
+        return flag != null && flag.length() > 0 && flag.toLowerCase().contains("flyme");
+    }
+
+    private static String getSystemProperty(String key) {
+        try {
+            Class<?> clz = Class.forName("android.os.SystemProperties");
+            Method get = clz.getMethod("get", new Class[]{String.class, String.class});
+            String ret = (String)get.invoke(clz, new Object[]{key, ""});
+            return ret != null && ret.length() != 0?ret:null;
+        } catch (Exception var4) {
+            return null;
+        }
     }
 }

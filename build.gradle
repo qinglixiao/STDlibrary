@@ -7,17 +7,14 @@ repositories {
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile 'com.google.code.gson:gson:2.7'
-    compile 'org.greenrobot:greendao:3.2.0'
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '26.0.2'
-
+    compileSdkVersion 26
+//    buildToolsVersion '25.0.2'
     lintOptions {
         abortOnError false
     }
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -37,4 +34,5 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+    buildToolsVersion '26.0.2'
 }

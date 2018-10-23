@@ -66,13 +66,6 @@
       <sourceFolder url="file://$MODULE_DIR$/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
@@ -80,6 +73,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/attr" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
@@ -88,7 +88,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/intermediate-jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
@@ -99,10 +98,12 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: __local_aars__:D.\personal\STDFramework\STDlibrary\libs\ormlite-android-4.45.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:D.\personal\STDFramework\STDlibrary\libs\slf4j-api-1.7.5.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:D.\personal\STDFramework\STDlibrary\libs\logback-android-1.0.10-2.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:D.\personal\STDFramework\STDlibrary\libs\ormlite-core-4.45.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/chunyu/personal/Delivery/STDlibrary/libs/logback-android-1.0.10-2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/chunyu/personal/Delivery/STDlibrary/libs/ormlite-core-4.45.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/chunyu/personal/Delivery/STDlibrary/libs/slf4j-api-1.7.5.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/chunyu/personal/Delivery/STDlibrary/libs/ormlite-android-4.45.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.7@jar" level="project" />
+    <orderEntry type="module" module-name="annotation-api" />
+    <orderEntry type="module" module-name="annotation" />
   </component>
 </module>

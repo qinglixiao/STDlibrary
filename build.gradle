@@ -5,8 +5,9 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: '*.jar', dir: 'libs')
-    compile 'com.google.code.gson:gson:2.7'
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation project(':annotation')
 }
 
 android {
@@ -35,4 +36,11 @@ android {
         release.setRoot('build-types/release')
     }
     buildToolsVersion '26.0.2'
+}
+
+dependencies {
+//    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation project(':annotation')
+    annotationProcessor project(':annotation-compiler')
+    implementation project(':annotation-api')
 }

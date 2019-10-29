@@ -1,5 +1,7 @@
 package com.library;
 
+import android.os.Bundle;
+
 import com.library.util.OsUtil;
 import com.library.util.PathUtil;
 import com.std.framework.annotation.RouterModule;
@@ -24,5 +26,13 @@ public class LibProvider {
     @RouterPath(value = "/mergePath")
     public String mergePath(String path1, String path2) {
         return PathUtil.merge(path1, path2);
+    }
+
+    @RouterPath(value="/bundle")
+    public void openActivity(Bundle bundle){
+        Object arg = bundle.get("arg");
+        if(arg != null){
+
+        }
     }
 }

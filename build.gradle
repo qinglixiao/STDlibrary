@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply from:'../comm.gradle'
 
 repositories {
     jcenter()
@@ -11,8 +12,6 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 26
-//    buildToolsVersion '25.0.2'
     lintOptions {
         abortOnError false
     }
@@ -35,7 +34,6 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
-    buildToolsVersion '26.0.2'
 }
 
 dependencies {

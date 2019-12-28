@@ -1,17 +1,15 @@
 apply plugin: 'com.android.library'
+apply from: '../unit_test_script.gradle'
+apply from: '../comm.gradle'
 
 dependencies {
-    compile fileTree(include: '*.jar', dir: 'libs')
-   }
+    implementation fileTree(include: '*.jar', dir: 'libs')
+}
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
-
-    lintOptions {
-        abortOnError false
+    defaultConfig {
+        multiDexEnabled true
     }
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -27,8 +25,8 @@ android {
         // This moves them out of them default location under src/<type>/... which would
         // conflict with src/ being used by the main source set.
         // Adding new build types or product flavors should be accompanied
-        // by a similar customization.
-        debug.setRoot('build-types/debug')
-        release.setRoot('build-types/release')
+//        // by a similar customization.
+//        debug.setRoot('build-types/debug')
+//        release.setRoot('build-types/release')
     }
 }
